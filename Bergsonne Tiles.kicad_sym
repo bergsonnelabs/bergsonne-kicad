@@ -1,7 +1,558 @@
 (kicad_symbol_lib
 	(version 20241209)
-	(generator "bergsonne_gen_kicad_sym")
+	(generator "bergsonne_gen_kicad_lib")
 	(generator_version "9.0")
+	(symbol "Core.ST.H5"
+		(pin_names (offset 0.762))
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "T"
+			(at 0 3.81 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "Core.ST.H5"
+			(at 0 1.27 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Footprint" "Bergsonne Tiles:T44-14"
+			(at 0 -41.91 0)
+			(effects (font (size 1.27 1.27)) (justify left) (hide yes))
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(property "ki_keywords" "tile bergsonne A11 A12 A13 A14 A5 A7 A8 ADC18- ADC19+ ADC3- ADC7+ B4 B7 B8 BOOT0 DAC1.OUT FDCAN1.RX FDCAN1.TX GND I2C1.CLK I2C1.DAT I2C3.CLK I2C3.DAT I3C1.CLK I3C1.DAT I3C2.CLK I3C2.DAT LPTIM1.2 NRST SPI1.CLK SPI1.MISO SPI1.MOSI SPI1.RDY SWCLK SWDIO TIM1.1 TIM1.1N TIM1.4 TIM1.ETR TIM2.1 TIM2.ETR TIM3.1 TIM3.2 TIM4.2 TIM4.3 TIM8.1N TIM8.BKIN2 UART4.RX UART4.TX USB.DM USB.DP USB.SOF V+"
+			(at 0 0 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(symbol "Core.ST.H5_0_1"
+			(rectangle (start 0 0) (end 68.58 -40.64) (stroke (width 0.254) (type default)) (fill (type background)))
+		)
+		(symbol "Core.ST.H5_1_1"
+			(pin power_in line
+				(at -2.54 -2.54 0)
+				(length 2.54)
+				(name "V+"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "10"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin power_in line
+				(at -2.54 -5.08 0)
+				(length 2.54)
+				(name "GND"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "1"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin bidirectional line
+				(at -2.54 -10.16 0)
+				(length 2.54)
+				(name "A8"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "2"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "USB.SOF" bidirectional line)
+				(alternate "I2C3.CLK" bidirectional line)
+				(alternate "I3C2.CLK" bidirectional line)
+				(alternate "SPI1.RDY" bidirectional line)
+				(alternate "TIM1.1" passive line)
+				(alternate "TIM8.BKIN2" passive line)
+			)
+			(pin bidirectional line
+				(at -2.54 -12.7 0)
+				(length 2.54)
+				(name "B4"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "3"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "I2C3.DAT" bidirectional line)
+				(alternate "I3C2.DAT" bidirectional line)
+				(alternate "SPI1.MISO" bidirectional line)
+				(alternate "TIM3.1" passive line)
+				(alternate "LPTIM1.2" passive line)
+			)
+			(pin bidirectional line
+				(at -2.54 -15.24 0)
+				(length 2.54)
+				(name "B8"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "4"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "I2C1.CLK" bidirectional line)
+				(alternate "I3C1.CLK" bidirectional line)
+				(alternate "TIM4.3" passive line)
+				(alternate "UART4.RX" bidirectional line)
+				(alternate "FDCAN1.RX" bidirectional line)
+			)
+			(pin bidirectional line
+				(at -2.54 -17.78 0)
+				(length 2.54)
+				(name "B7"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "5"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "I2C1.DAT" bidirectional line)
+				(alternate "I3C1.DAT" bidirectional line)
+				(alternate "TIM4.2" passive line)
+				(alternate "FDCAN1.TX" bidirectional line)
+			)
+			(pin bidirectional line
+				(at -2.54 -20.32 0)
+				(length 2.54)
+				(name "A12"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "6"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "USB.DP" bidirectional line)
+				(alternate "TIM1.ETR" passive line)
+				(alternate "UART4.TX" bidirectional line)
+				(alternate "FDCAN1.TX" bidirectional line)
+			)
+			(pin bidirectional line
+				(at -2.54 -22.86 0)
+				(length 2.54)
+				(name "A11"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "7"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "USB.DM" bidirectional line)
+				(alternate "TIM1.4" passive line)
+				(alternate "UART4.RX" bidirectional line)
+				(alternate "FDCAN1.RX" bidirectional line)
+			)
+			(pin bidirectional line
+				(at -2.54 -25.4 0)
+				(length 2.54)
+				(name "A7"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "8"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "SPI1.MOSI" bidirectional line)
+				(alternate "ADC7+" passive line)
+				(alternate "ADC3-" passive line)
+				(alternate "TIM1.1N" passive line)
+				(alternate "TIM3.2" passive line)
+				(alternate "TIM8.1N" passive line)
+			)
+			(pin bidirectional line
+				(at -2.54 -27.94 0)
+				(length 2.54)
+				(name "A5"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "9"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "SPI1.CLK" bidirectional line)
+				(alternate "ADC19+" passive line)
+				(alternate "ADC18-" passive line)
+				(alternate "TIM2.1" passive line)
+				(alternate "TIM8.1N" passive line)
+				(alternate "TIM2.ETR" passive line)
+				(alternate "DAC1.OUT" passive line)
+			)
+			(pin passive line
+				(at -2.54 -30.48 0)
+				(length 2.54)
+				(name "BOOT0"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "11"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin passive line
+				(at -2.54 -33.02 0)
+				(length 2.54)
+				(name "NRST"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "12"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin bidirectional line
+				(at -2.54 -35.56 0)
+				(length 2.54)
+				(name "A14"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "13"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "SWCLK" passive line)
+			)
+			(pin bidirectional line
+				(at -2.54 -38.1 0)
+				(length 2.54)
+				(name "A13"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "14"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "SWDIO" passive line)
+			)
+			(text "1.71-3.6V"
+				(at 10.16 -2.54 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "USB.SOF, I2C3.CLK, I3C2.CLK, SPI1.RDY, TIM1.1/8.BKIN2"
+				(at 10.16 -10.16 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "I2C3.DAT, I3C2.DAT, SPI1.MISO, TIM3.1"
+				(at 10.16 -12.7 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "I2C1.CLK, I3C1.CLK, TIM4.3, UART4.RX, FDCAN1.RX"
+				(at 10.16 -15.24 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "I2C1.DAT, I3C1.DAT, TIM4.2, FDCAN1.TX"
+				(at 10.16 -17.78 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "USB.DP, TIM1.ETR, UART4.TX, FDCAN1.TX"
+				(at 10.16 -20.32 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "USB.DM, TIM1.4, UART4.RX, FDCAN1.RX"
+				(at 10.16 -22.86 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "SPI1.MOSI, ADC7+, ADC3-, TIM1.1N/3.2/8.1N"
+				(at 10.16 -25.4 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "SPI1.CLK, ADC19+, ADC18-, TIM2.1/8.1N/2.ETR, DAC1.OUT"
+				(at 10.16 -27.94 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "SWCLK"
+				(at 10.16 -35.56 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "SWDIO"
+				(at 10.16 -38.1 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "Core.ST.L0"
+		(pin_names (offset 0.762))
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "T"
+			(at 0 3.81 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "Core.ST.L0"
+			(at 0 1.27 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Footprint" "Bergsonne Tiles:T44-14"
+			(at 0 -41.91 0)
+			(effects (font (size 1.27 1.27)) (justify left) (hide yes))
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(property "ki_keywords" "tile bergsonne A0 A1 A13 A14 A2 A3 A5 ADC0 ADC1 ADC2 ADC3 ADC5 ADC8 B0 B6 B7 B9 BOOT0 COMP1.IN+ COMP1.IN- COMP1.OUT COMP2.IN+ COMP2.IN- COMP2.OUT GND I2C1.CLK I2C1.DAT I2C1.SMBA LPTIM1.1 LPTIM1.2 LPTIM1.ETR LPTIM1.OUT LPUART1.RX LPUART1.TX NRST SWCLK SWDIO TIM2.1 TIM2.2 TIM2.3 TIM2.4 TIM2.ETR TIM21.1 TIM21.2 TIM21.ETR USART2.CTS USART2.RTS_DE USART2.RX USART2.TX V+"
+			(at 0 0 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(symbol "Core.ST.L0_0_1"
+			(rectangle (start 0 0) (end 71.12 -40.64) (stroke (width 0.254) (type default)) (fill (type background)))
+		)
+		(symbol "Core.ST.L0_1_1"
+			(pin power_in line
+				(at -2.54 -2.54 0)
+				(length 2.54)
+				(name "V+"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "10"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin power_in line
+				(at -2.54 -5.08 0)
+				(length 2.54)
+				(name "GND"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "1"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin bidirectional line
+				(at -2.54 -10.16 0)
+				(length 2.54)
+				(name "A3"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "2"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "ADC3" passive line)
+				(alternate "TIM21.2" passive line)
+				(alternate "TIM2.4" passive line)
+				(alternate "USART2.RX" bidirectional line)
+				(alternate "LPUART1.RX" bidirectional line)
+				(alternate "COMP2.IN+" passive line)
+			)
+			(pin bidirectional line
+				(at -2.54 -12.7 0)
+				(length 2.54)
+				(name "A0"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "3"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "ADC0" passive line)
+				(alternate "TIM2.1" passive line)
+				(alternate "TIM2.ETR" passive line)
+				(alternate "LPTIM1.1" passive line)
+				(alternate "USART2.RX" bidirectional line)
+				(alternate "USART2.CTS" bidirectional line)
+				(alternate "LPUART1.RX" bidirectional line)
+				(alternate "COMP1.OUT" passive line)
+				(alternate "COMP1.IN-" passive line)
+			)
+			(pin bidirectional line
+				(at -2.54 -15.24 0)
+				(length 2.54)
+				(name "B6"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "4"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "I2C1.CLK" bidirectional line)
+				(alternate "TIM2.3" passive line)
+				(alternate "LPTIM1.ETR" passive line)
+				(alternate "USART2.TX" bidirectional line)
+				(alternate "LPUART1.TX" bidirectional line)
+				(alternate "COMP2.IN+" passive line)
+			)
+			(pin bidirectional line
+				(at -2.54 -17.78 0)
+				(length 2.54)
+				(name "B7"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "5"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "I2C1.DAT" bidirectional line)
+				(alternate "TIM2.4" passive line)
+				(alternate "LPTIM1.2" passive line)
+				(alternate "USART2.RX" bidirectional line)
+				(alternate "LPUART1.RX" bidirectional line)
+				(alternate "COMP2.IN+" passive line)
+			)
+			(pin bidirectional line
+				(at -2.54 -20.32 0)
+				(length 2.54)
+				(name "A1"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "6"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "I2C1.SMBA" bidirectional line)
+				(alternate "ADC1" passive line)
+				(alternate "TIM2.2" passive line)
+				(alternate "TIM21.ETR" passive line)
+				(alternate "LPTIM1.2" passive line)
+				(alternate "USART2.RTS_DE" bidirectional line)
+				(alternate "LPUART1.TX" bidirectional line)
+				(alternate "COMP1.IN+" passive line)
+			)
+			(pin bidirectional line
+				(at -2.54 -22.86 0)
+				(length 2.54)
+				(name "A2"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "7"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "ADC2" passive line)
+				(alternate "TIM21.1" passive line)
+				(alternate "TIM2.3" passive line)
+				(alternate "USART2.TX" bidirectional line)
+				(alternate "LPUART1.TX" bidirectional line)
+				(alternate "COMP2.IN-" passive line)
+				(alternate "COMP2.OUT" passive line)
+			)
+			(pin bidirectional line
+				(at -2.54 -25.4 0)
+				(length 2.54)
+				(name "A5"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "8"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "ADC5" passive line)
+				(alternate "TIM2.1" passive line)
+				(alternate "TIM2.ETR" passive line)
+				(alternate "LPTIM1.2" passive line)
+				(alternate "COMP1.IN-" passive line)
+				(alternate "COMP2.IN-" passive line)
+			)
+			(pin bidirectional line
+				(at -2.54 -27.94 0)
+				(length 2.54)
+				(name "B0"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "9"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "ADC8" passive line)
+				(alternate "TIM2.2" passive line)
+				(alternate "TIM2.3" passive line)
+				(alternate "USART2.RTS_DE" bidirectional line)
+			)
+			(pin bidirectional line
+				(at -2.54 -30.48 0)
+				(length 2.54)
+				(name "B9"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "11"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "BOOT0" passive line)
+			)
+			(pin passive line
+				(at -2.54 -33.02 0)
+				(length 2.54)
+				(name "NRST"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "12"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin bidirectional line
+				(at -2.54 -35.56 0)
+				(length 2.54)
+				(name "A14"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "13"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "I2C1.SMBA" bidirectional line)
+				(alternate "LPTIM1.OUT" passive line)
+				(alternate "USART2.TX" bidirectional line)
+				(alternate "LPUART1.TX" bidirectional line)
+				(alternate "SWCLK" passive line)
+				(alternate "COMP2.OUT" passive line)
+			)
+			(pin bidirectional line
+				(at -2.54 -38.1 0)
+				(length 2.54)
+				(name "A13"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "14"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "I2C1.DAT" bidirectional line)
+				(alternate "LPTIM1.ETR" passive line)
+				(alternate "LPUART1.RX" bidirectional line)
+				(alternate "COMP1.OUT" passive line)
+				(alternate "SWDIO" passive line)
+			)
+			(text "1.8-3.6V"
+				(at 8.89 -2.54 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "ADC3, TIM21.2/2.4, USART2.RX, LPUART1.RX"
+				(at 8.89 -10.16 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "ADC0, TIM2.1/2.ETR, USART2.RX, USART2.CTS, LPUART1.RX"
+				(at 8.89 -12.7 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "I2C1.CLK, TIM2.3, USART2.TX, LPUART1.TX"
+				(at 8.89 -15.24 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "I2C1.DAT, TIM2.4, USART2.RX, LPUART1.RX"
+				(at 8.89 -17.78 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "I2C1.SMBA, ADC1, TIM2.2/21.ETR, USART2.RTS_DE, LPUART1.TX"
+				(at 8.89 -20.32 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "ADC2, TIM21.1/2.3, USART2.TX, LPUART1.TX"
+				(at 8.89 -22.86 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "ADC5, TIM2.1/2.ETR"
+				(at 8.89 -25.4 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "ADC8, TIM2.2/2.3, USART2.RTS_DE"
+				(at 8.89 -27.94 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "BOOT0"
+				(at 8.89 -30.48 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "I2C1.SMBA, USART2.TX, LPUART1.TX, SWCLK"
+				(at 8.89 -35.56 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "I2C1.DAT, LPUART1.RX, SWDIO"
+				(at 8.89 -38.1 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+		)
+		(embedded_fonts no)
+	)
 	(symbol "Core.ST.L4-b"
 		(pin_names (offset 0.762))
 		(exclude_from_sim no)
@@ -1803,6 +2354,312 @@
 		)
 		(embedded_fonts no)
 	)
+	(symbol "Sense.CAM.P"
+		(pin_names (offset 0.762))
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "T"
+			(at 0 3.81 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "Sense.CAM.P"
+			(at 0 1.27 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Footprint" "Bergsonne Tiles:T44-10"
+			(at 0 -31.75 0)
+			(effects (font (size 1.27 1.27)) (justify left) (hide yes))
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(property "ki_keywords" "tile bergsonne GND GPIO1 GPIO2 I2C.CLK I2C.DAT SPI.CLK SPI.CS SPI.MISO SPI.MOSI V+"
+			(at 0 0 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(symbol "Sense.CAM.P_0_1"
+			(rectangle (start 0 0) (end 25.4 -30.48) (stroke (width 0.254) (type default)) (fill (type background)))
+		)
+		(symbol "Sense.CAM.P_1_1"
+			(pin power_in line
+				(at -2.54 -2.54 0)
+				(length 2.54)
+				(name "V+"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "10"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin power_in line
+				(at -2.54 -5.08 0)
+				(length 2.54)
+				(name "GND"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "1"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin bidirectional line
+				(at -2.54 -10.16 0)
+				(length 2.54)
+				(name "GPIO1"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "2"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin bidirectional line
+				(at -2.54 -12.7 0)
+				(length 2.54)
+				(name "GPIO2"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "3"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin bidirectional line
+				(at -2.54 -15.24 0)
+				(length 2.54)
+				(name "I2C.CLK"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "4"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin bidirectional line
+				(at -2.54 -17.78 0)
+				(length 2.54)
+				(name "I2C.DAT"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "5"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at -2.54 -20.32 0)
+				(length 2.54)
+				(name "SPI.MISO"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "6"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -2.54 -22.86 0)
+				(length 2.54)
+				(name "SPI.CLK"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "7"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -2.54 -25.4 0)
+				(length 2.54)
+				(name "SPI.CS"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "8"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -2.54 -27.94 0)
+				(length 2.54)
+				(name "SPI.MOSI"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "9"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(text "1.8-3.3V"
+				(at 13.97 -2.54 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "Sense.HR"
+		(pin_names (offset 0.762))
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "T"
+			(at 0 3.81 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "Sense.HR"
+			(at 0 1.27 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Footprint" "Bergsonne Tiles:T44-10"
+			(at 0 -31.75 0)
+			(effects (font (size 1.27 1.27)) (justify left) (hide yes))
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(property "ki_keywords" "tile bergsonne GND I2C.AD0 I2C.CLK I2C.DAT I2C.EN INTB SPI.CLK SPI.CS SPI.MISO SPI.MOSI V+ VLED"
+			(at 0 0 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(symbol "Sense.HR_0_1"
+			(rectangle (start 0 0) (end 22.86 -30.48) (stroke (width 0.254) (type default)) (fill (type background)))
+		)
+		(symbol "Sense.HR_1_1"
+			(pin power_in line
+				(at -2.54 -2.54 0)
+				(length 2.54)
+				(name "V+"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "10"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin power_in line
+				(at -2.54 -5.08 0)
+				(length 2.54)
+				(name "VLED"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "9"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin power_in line
+				(at -2.54 -7.62 0)
+				(length 2.54)
+				(name "GND"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "1"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin bidirectional line
+				(at -2.54 -12.7 0)
+				(length 2.54)
+				(name "I2C.AD0"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "2"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "SPI.MISO" bidirectional line)
+			)
+			(pin bidirectional line
+				(at -2.54 -15.24 0)
+				(length 2.54)
+				(name "I2C.EN"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "3"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "SPI.CS" bidirectional line)
+			)
+			(pin bidirectional line
+				(at -2.54 -17.78 0)
+				(length 2.54)
+				(name "I2C.CLK"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "4"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "SPI.CLK" bidirectional line)
+			)
+			(pin bidirectional line
+				(at -2.54 -20.32 0)
+				(length 2.54)
+				(name "I2C.DAT"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "5"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "SPI.MOSI" bidirectional line)
+			)
+			(pin no_connect line
+				(at -2.54 -22.86 0)
+				(length 2.54)
+				(hide yes)
+				(name ""
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "6"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin no_connect line
+				(at -2.54 -25.4 0)
+				(length 2.54)
+				(hide yes)
+				(name ""
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "7"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at -2.54 -27.94 0)
+				(length 2.54)
+				(name "INTB"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "8"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(text "1.7-2V"
+				(at 12.7 -2.54 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "2.7-5.5V"
+				(at 12.7 -5.08 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "SPI.MISO"
+				(at 12.7 -12.7 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "SPI.CS"
+				(at 12.7 -15.24 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "SPI.CLK"
+				(at 12.7 -17.78 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "SPI.MOSI"
+				(at 12.7 -20.32 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+		)
+		(embedded_fonts no)
+	)
 	(symbol "Sense.I.6P6"
 		(pin_names (offset 0.762))
 		(exclude_from_sim no)
@@ -1962,6 +2819,151 @@
 			)
 			(text "SPI.MOSI, I3C.DAT"
 				(at 12.7 -17.78 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "Sense.M.3G"
+		(pin_names (offset 0.762))
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "T"
+			(at 0 3.81 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "Sense.M.3G"
+			(at 0 1.27 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Footprint" "Bergsonne Tiles:T44-10"
+			(at 0 -31.75 0)
+			(effects (font (size 1.27 1.27)) (justify left) (hide yes))
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(property "ki_keywords" "tile bergsonne GND I2C.CLK I2C.DAT INT V+"
+			(at 0 0 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(symbol "Sense.M.3G_0_1"
+			(rectangle (start 0 0) (end 25.4 -30.48) (stroke (width 0.254) (type default)) (fill (type background)))
+		)
+		(symbol "Sense.M.3G_1_1"
+			(pin power_in line
+				(at -2.54 -2.54 0)
+				(length 2.54)
+				(name "V+"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "10"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin power_in line
+				(at -2.54 -5.08 0)
+				(length 2.54)
+				(name "GND"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "1"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin no_connect line
+				(at -2.54 -10.16 0)
+				(length 2.54)
+				(hide yes)
+				(name ""
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "2"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin no_connect line
+				(at -2.54 -12.7 0)
+				(length 2.54)
+				(hide yes)
+				(name ""
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "3"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin bidirectional line
+				(at -2.54 -15.24 0)
+				(length 2.54)
+				(name "I2C.CLK"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "4"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin bidirectional line
+				(at -2.54 -17.78 0)
+				(length 2.54)
+				(name "I2C.DAT"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "5"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin no_connect line
+				(at -2.54 -20.32 0)
+				(length 2.54)
+				(hide yes)
+				(name ""
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "6"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin no_connect line
+				(at -2.54 -22.86 0)
+				(length 2.54)
+				(hide yes)
+				(name ""
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "7"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin no_connect line
+				(at -2.54 -25.4 0)
+				(length 2.54)
+				(hide yes)
+				(name ""
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "8"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at -2.54 -27.94 0)
+				(length 2.54)
+				(name "INT"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "9"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(text "1.72-3.6V"
+				(at 12.7 -2.54 0)
 				(effects (font (size 1.27 1.27)) (justify left))
 			)
 		)
@@ -2567,1008 +3569,6 @@
 			)
 			(text "QSPI.IO3"
 				(at 13.97 -27.94 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-		)
-		(embedded_fonts no)
-	)
-	(symbol "Core.ST.H5"
-		(pin_names (offset 0.762))
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(property "Reference" "T"
-			(at 0 3.81 0)
-			(effects (font (size 1.27 1.27)) (justify left))
-		)
-		(property "Value" "Core.ST.H5"
-			(at 0 1.27 0)
-			(effects (font (size 1.27 1.27)) (justify left))
-		)
-		(property "Footprint" "Bergsonne Tiles:T44-14"
-			(at 0 -41.91 0)
-			(effects (font (size 1.27 1.27)) (justify left) (hide yes))
-		)
-		(property "Datasheet" ""
-			(at 0 0 0)
-			(effects (font (size 1.27 1.27)) (hide yes))
-		)
-		(property "Description" ""
-			(at 0 0 0)
-			(effects (font (size 1.27 1.27)) (hide yes))
-		)
-		(property "ki_keywords" "tile bergsonne A11 A12 A13 A14 A5 A7 A8 ADC18- ADC19+ ADC3- ADC7+ B4 B7 B8 BOOT0 DAC1.OUT FDCAN1.RX FDCAN1.TX GND I2C1.CLK I2C1.DAT I2C3.CLK I2C3.DAT I3C1.CLK I3C1.DAT I3C2.CLK I3C2.DAT LPTIM1.2 NRST SPI1.CLK SPI1.MISO SPI1.MOSI SPI1.RDY SWCLK SWDIO TIM1.1 TIM1.1N TIM1.4 TIM1.ETR TIM2.1 TIM2.ETR TIM3.1 TIM3.2 TIM4.2 TIM4.3 TIM8.1N TIM8.BKIN2 UART4.RX UART4.TX USB.DM USB.DP USB.SOF V+"
-			(at 0 0 0)
-			(effects (font (size 1.27 1.27)) (hide yes))
-		)
-		(symbol "Core.ST.H5_0_1"
-			(rectangle (start 0 0) (end 68.58 -40.64) (stroke (width 0.254) (type default)) (fill (type background)))
-		)
-		(symbol "Core.ST.H5_1_1"
-			(pin power_in line
-				(at -2.54 -2.54 0)
-				(length 2.54)
-				(name "V+"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "10"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin power_in line
-				(at -2.54 -5.08 0)
-				(length 2.54)
-				(name "GND"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "1"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin bidirectional line
-				(at -2.54 -10.16 0)
-				(length 2.54)
-				(name "A8"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "2"
-					(effects (font (size 1.27 1.27)))
-				)
-				(alternate "USB.SOF" bidirectional line)
-				(alternate "I2C3.CLK" bidirectional line)
-				(alternate "I3C2.CLK" bidirectional line)
-				(alternate "SPI1.RDY" bidirectional line)
-				(alternate "TIM1.1" passive line)
-				(alternate "TIM8.BKIN2" passive line)
-			)
-			(pin bidirectional line
-				(at -2.54 -12.7 0)
-				(length 2.54)
-				(name "B4"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "3"
-					(effects (font (size 1.27 1.27)))
-				)
-				(alternate "I2C3.DAT" bidirectional line)
-				(alternate "I3C2.DAT" bidirectional line)
-				(alternate "SPI1.MISO" bidirectional line)
-				(alternate "TIM3.1" passive line)
-				(alternate "LPTIM1.2" passive line)
-			)
-			(pin bidirectional line
-				(at -2.54 -15.24 0)
-				(length 2.54)
-				(name "B8"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "4"
-					(effects (font (size 1.27 1.27)))
-				)
-				(alternate "I2C1.CLK" bidirectional line)
-				(alternate "I3C1.CLK" bidirectional line)
-				(alternate "TIM4.3" passive line)
-				(alternate "UART4.RX" bidirectional line)
-				(alternate "FDCAN1.RX" bidirectional line)
-			)
-			(pin bidirectional line
-				(at -2.54 -17.78 0)
-				(length 2.54)
-				(name "B7"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "5"
-					(effects (font (size 1.27 1.27)))
-				)
-				(alternate "I2C1.DAT" bidirectional line)
-				(alternate "I3C1.DAT" bidirectional line)
-				(alternate "TIM4.2" passive line)
-				(alternate "FDCAN1.TX" bidirectional line)
-			)
-			(pin bidirectional line
-				(at -2.54 -20.32 0)
-				(length 2.54)
-				(name "A12"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "6"
-					(effects (font (size 1.27 1.27)))
-				)
-				(alternate "USB.DP" bidirectional line)
-				(alternate "TIM1.ETR" passive line)
-				(alternate "UART4.TX" bidirectional line)
-				(alternate "FDCAN1.TX" bidirectional line)
-			)
-			(pin bidirectional line
-				(at -2.54 -22.86 0)
-				(length 2.54)
-				(name "A11"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "7"
-					(effects (font (size 1.27 1.27)))
-				)
-				(alternate "USB.DM" bidirectional line)
-				(alternate "TIM1.4" passive line)
-				(alternate "UART4.RX" bidirectional line)
-				(alternate "FDCAN1.RX" bidirectional line)
-			)
-			(pin bidirectional line
-				(at -2.54 -25.4 0)
-				(length 2.54)
-				(name "A7"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "8"
-					(effects (font (size 1.27 1.27)))
-				)
-				(alternate "SPI1.MOSI" bidirectional line)
-				(alternate "ADC7+" passive line)
-				(alternate "ADC3-" passive line)
-				(alternate "TIM1.1N" passive line)
-				(alternate "TIM3.2" passive line)
-				(alternate "TIM8.1N" passive line)
-			)
-			(pin bidirectional line
-				(at -2.54 -27.94 0)
-				(length 2.54)
-				(name "A5"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "9"
-					(effects (font (size 1.27 1.27)))
-				)
-				(alternate "SPI1.CLK" bidirectional line)
-				(alternate "ADC19+" passive line)
-				(alternate "ADC18-" passive line)
-				(alternate "TIM2.1" passive line)
-				(alternate "TIM8.1N" passive line)
-				(alternate "TIM2.ETR" passive line)
-				(alternate "DAC1.OUT" passive line)
-			)
-			(pin passive line
-				(at -2.54 -30.48 0)
-				(length 2.54)
-				(name "BOOT0"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "11"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin passive line
-				(at -2.54 -33.02 0)
-				(length 2.54)
-				(name "NRST"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "12"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin bidirectional line
-				(at -2.54 -35.56 0)
-				(length 2.54)
-				(name "A14"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "13"
-					(effects (font (size 1.27 1.27)))
-				)
-				(alternate "SWCLK" passive line)
-			)
-			(pin bidirectional line
-				(at -2.54 -38.1 0)
-				(length 2.54)
-				(name "A13"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "14"
-					(effects (font (size 1.27 1.27)))
-				)
-				(alternate "SWDIO" passive line)
-			)
-			(text "1.71-3.6V"
-				(at 10.16 -2.54 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-			(text "USB.SOF, I2C3.CLK, I3C2.CLK, SPI1.RDY, TIM1.1/8.BKIN2"
-				(at 10.16 -10.16 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-			(text "I2C3.DAT, I3C2.DAT, SPI1.MISO, TIM3.1"
-				(at 10.16 -12.7 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-			(text "I2C1.CLK, I3C1.CLK, TIM4.3, UART4.RX, FDCAN1.RX"
-				(at 10.16 -15.24 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-			(text "I2C1.DAT, I3C1.DAT, TIM4.2, FDCAN1.TX"
-				(at 10.16 -17.78 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-			(text "USB.DP, TIM1.ETR, UART4.TX, FDCAN1.TX"
-				(at 10.16 -20.32 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-			(text "USB.DM, TIM1.4, UART4.RX, FDCAN1.RX"
-				(at 10.16 -22.86 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-			(text "SPI1.MOSI, ADC7+, ADC3-, TIM1.1N/3.2/8.1N"
-				(at 10.16 -25.4 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-			(text "SPI1.CLK, ADC19+, ADC18-, TIM2.1/8.1N/2.ETR, DAC1.OUT"
-				(at 10.16 -27.94 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-			(text "SWCLK"
-				(at 10.16 -35.56 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-			(text "SWDIO"
-				(at 10.16 -38.1 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-		)
-		(embedded_fonts no)
-	)
-	(symbol "Core.ST.L0"
-		(pin_names (offset 0.762))
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(property "Reference" "T"
-			(at 0 3.81 0)
-			(effects (font (size 1.27 1.27)) (justify left))
-		)
-		(property "Value" "Core.ST.L0"
-			(at 0 1.27 0)
-			(effects (font (size 1.27 1.27)) (justify left))
-		)
-		(property "Footprint" "Bergsonne Tiles:T44-14"
-			(at 0 -41.91 0)
-			(effects (font (size 1.27 1.27)) (justify left) (hide yes))
-		)
-		(property "Datasheet" ""
-			(at 0 0 0)
-			(effects (font (size 1.27 1.27)) (hide yes))
-		)
-		(property "Description" ""
-			(at 0 0 0)
-			(effects (font (size 1.27 1.27)) (hide yes))
-		)
-		(property "ki_keywords" "tile bergsonne A0 A1 A13 A14 A2 A3 A5 ADC0 ADC1 ADC2 ADC3 ADC5 ADC8 B0 B6 B7 B9 BOOT0 COMP1.IN+ COMP1.IN- COMP1.OUT COMP2.IN+ COMP2.IN- COMP2.OUT GND I2C1.CLK I2C1.DAT I2C1.SMBA LPTIM1.1 LPTIM1.2 LPTIM1.ETR LPTIM1.OUT LPUART1.RX LPUART1.TX NRST SWCLK SWDIO TIM2.1 TIM2.2 TIM2.3 TIM2.4 TIM2.ETR TIM21.1 TIM21.2 TIM21.ETR USART2.CTS USART2.RTS_DE USART2.RX USART2.TX V+"
-			(at 0 0 0)
-			(effects (font (size 1.27 1.27)) (hide yes))
-		)
-		(symbol "Core.ST.L0_0_1"
-			(rectangle (start 0 0) (end 71.12 -40.64) (stroke (width 0.254) (type default)) (fill (type background)))
-		)
-		(symbol "Core.ST.L0_1_1"
-			(pin power_in line
-				(at -2.54 -2.54 0)
-				(length 2.54)
-				(name "V+"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "10"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin power_in line
-				(at -2.54 -5.08 0)
-				(length 2.54)
-				(name "GND"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "1"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin bidirectional line
-				(at -2.54 -10.16 0)
-				(length 2.54)
-				(name "A3"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "2"
-					(effects (font (size 1.27 1.27)))
-				)
-				(alternate "ADC3" passive line)
-				(alternate "TIM21.2" passive line)
-				(alternate "TIM2.4" passive line)
-				(alternate "USART2.RX" bidirectional line)
-				(alternate "LPUART1.RX" bidirectional line)
-				(alternate "COMP2.IN+" passive line)
-			)
-			(pin bidirectional line
-				(at -2.54 -12.7 0)
-				(length 2.54)
-				(name "A0"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "3"
-					(effects (font (size 1.27 1.27)))
-				)
-				(alternate "ADC0" passive line)
-				(alternate "TIM2.1" passive line)
-				(alternate "TIM2.ETR" passive line)
-				(alternate "LPTIM1.1" passive line)
-				(alternate "USART2.RX" bidirectional line)
-				(alternate "USART2.CTS" bidirectional line)
-				(alternate "LPUART1.RX" bidirectional line)
-				(alternate "COMP1.OUT" passive line)
-				(alternate "COMP1.IN-" passive line)
-			)
-			(pin bidirectional line
-				(at -2.54 -15.24 0)
-				(length 2.54)
-				(name "B6"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "4"
-					(effects (font (size 1.27 1.27)))
-				)
-				(alternate "I2C1.CLK" bidirectional line)
-				(alternate "TIM2.3" passive line)
-				(alternate "LPTIM1.ETR" passive line)
-				(alternate "USART2.TX" bidirectional line)
-				(alternate "LPUART1.TX" bidirectional line)
-				(alternate "COMP2.IN+" passive line)
-			)
-			(pin bidirectional line
-				(at -2.54 -17.78 0)
-				(length 2.54)
-				(name "B7"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "5"
-					(effects (font (size 1.27 1.27)))
-				)
-				(alternate "I2C1.DAT" bidirectional line)
-				(alternate "TIM2.4" passive line)
-				(alternate "LPTIM1.2" passive line)
-				(alternate "USART2.RX" bidirectional line)
-				(alternate "LPUART1.RX" bidirectional line)
-				(alternate "COMP2.IN+" passive line)
-			)
-			(pin bidirectional line
-				(at -2.54 -20.32 0)
-				(length 2.54)
-				(name "A1"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "6"
-					(effects (font (size 1.27 1.27)))
-				)
-				(alternate "I2C1.SMBA" bidirectional line)
-				(alternate "ADC1" passive line)
-				(alternate "TIM2.2" passive line)
-				(alternate "TIM21.ETR" passive line)
-				(alternate "LPTIM1.2" passive line)
-				(alternate "USART2.RTS_DE" bidirectional line)
-				(alternate "LPUART1.TX" bidirectional line)
-				(alternate "COMP1.IN+" passive line)
-			)
-			(pin bidirectional line
-				(at -2.54 -22.86 0)
-				(length 2.54)
-				(name "A2"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "7"
-					(effects (font (size 1.27 1.27)))
-				)
-				(alternate "ADC2" passive line)
-				(alternate "TIM21.1" passive line)
-				(alternate "TIM2.3" passive line)
-				(alternate "USART2.TX" bidirectional line)
-				(alternate "LPUART1.TX" bidirectional line)
-				(alternate "COMP2.IN-" passive line)
-				(alternate "COMP2.OUT" passive line)
-			)
-			(pin bidirectional line
-				(at -2.54 -25.4 0)
-				(length 2.54)
-				(name "A5"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "8"
-					(effects (font (size 1.27 1.27)))
-				)
-				(alternate "ADC5" passive line)
-				(alternate "TIM2.1" passive line)
-				(alternate "TIM2.ETR" passive line)
-				(alternate "LPTIM1.2" passive line)
-				(alternate "COMP1.IN-" passive line)
-				(alternate "COMP2.IN-" passive line)
-			)
-			(pin bidirectional line
-				(at -2.54 -27.94 0)
-				(length 2.54)
-				(name "B0"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "9"
-					(effects (font (size 1.27 1.27)))
-				)
-				(alternate "ADC8" passive line)
-				(alternate "TIM2.2" passive line)
-				(alternate "TIM2.3" passive line)
-				(alternate "USART2.RTS_DE" bidirectional line)
-			)
-			(pin bidirectional line
-				(at -2.54 -30.48 0)
-				(length 2.54)
-				(name "B9"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "11"
-					(effects (font (size 1.27 1.27)))
-				)
-				(alternate "BOOT0" passive line)
-			)
-			(pin passive line
-				(at -2.54 -33.02 0)
-				(length 2.54)
-				(name "NRST"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "12"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin bidirectional line
-				(at -2.54 -35.56 0)
-				(length 2.54)
-				(name "A14"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "13"
-					(effects (font (size 1.27 1.27)))
-				)
-				(alternate "I2C1.SMBA" bidirectional line)
-				(alternate "LPTIM1.OUT" passive line)
-				(alternate "USART2.TX" bidirectional line)
-				(alternate "LPUART1.TX" bidirectional line)
-				(alternate "SWCLK" passive line)
-				(alternate "COMP2.OUT" passive line)
-			)
-			(pin bidirectional line
-				(at -2.54 -38.1 0)
-				(length 2.54)
-				(name "A13"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "14"
-					(effects (font (size 1.27 1.27)))
-				)
-				(alternate "I2C1.DAT" bidirectional line)
-				(alternate "LPTIM1.ETR" passive line)
-				(alternate "LPUART1.RX" bidirectional line)
-				(alternate "COMP1.OUT" passive line)
-				(alternate "SWDIO" passive line)
-			)
-			(text "1.8-3.6V"
-				(at 8.89 -2.54 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-			(text "ADC3, TIM21.2/2.4, USART2.RX, LPUART1.RX"
-				(at 8.89 -10.16 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-			(text "ADC0, TIM2.1/2.ETR, USART2.RX, USART2.CTS, LPUART1.RX"
-				(at 8.89 -12.7 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-			(text "I2C1.CLK, TIM2.3, USART2.TX, LPUART1.TX"
-				(at 8.89 -15.24 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-			(text "I2C1.DAT, TIM2.4, USART2.RX, LPUART1.RX"
-				(at 8.89 -17.78 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-			(text "I2C1.SMBA, ADC1, TIM2.2/21.ETR, USART2.RTS_DE, LPUART1.TX"
-				(at 8.89 -20.32 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-			(text "ADC2, TIM21.1/2.3, USART2.TX, LPUART1.TX"
-				(at 8.89 -22.86 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-			(text "ADC5, TIM2.1/2.ETR"
-				(at 8.89 -25.4 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-			(text "ADC8, TIM2.2/2.3, USART2.RTS_DE"
-				(at 8.89 -27.94 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-			(text "BOOT0"
-				(at 8.89 -30.48 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-			(text "I2C1.SMBA, USART2.TX, LPUART1.TX, SWCLK"
-				(at 8.89 -35.56 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-			(text "I2C1.DAT, LPUART1.RX, SWDIO"
-				(at 8.89 -38.1 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-		)
-		(embedded_fonts no)
-	)
-	(symbol "Sense.CAM.P"
-		(pin_names (offset 0.762))
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(property "Reference" "T"
-			(at 0 3.81 0)
-			(effects (font (size 1.27 1.27)) (justify left))
-		)
-		(property "Value" "Sense.CAM.P"
-			(at 0 1.27 0)
-			(effects (font (size 1.27 1.27)) (justify left))
-		)
-		(property "Footprint" "Bergsonne Tiles:T44-10"
-			(at 0 -31.75 0)
-			(effects (font (size 1.27 1.27)) (justify left) (hide yes))
-		)
-		(property "Datasheet" ""
-			(at 0 0 0)
-			(effects (font (size 1.27 1.27)) (hide yes))
-		)
-		(property "Description" ""
-			(at 0 0 0)
-			(effects (font (size 1.27 1.27)) (hide yes))
-		)
-		(property "ki_keywords" "tile bergsonne GND GPIO1 GPIO2 I2C.CLK I2C.DAT SPI.CLK SPI.CS SPI.MISO SPI.MOSI V+"
-			(at 0 0 0)
-			(effects (font (size 1.27 1.27)) (hide yes))
-		)
-		(symbol "Sense.CAM.P_0_1"
-			(rectangle (start 0 0) (end 25.4 -30.48) (stroke (width 0.254) (type default)) (fill (type background)))
-		)
-		(symbol "Sense.CAM.P_1_1"
-			(pin power_in line
-				(at -2.54 -2.54 0)
-				(length 2.54)
-				(name "V+"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "10"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin power_in line
-				(at -2.54 -5.08 0)
-				(length 2.54)
-				(name "GND"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "1"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin bidirectional line
-				(at -2.54 -10.16 0)
-				(length 2.54)
-				(name "GPIO1"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "2"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin bidirectional line
-				(at -2.54 -12.7 0)
-				(length 2.54)
-				(name "GPIO2"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "3"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin bidirectional line
-				(at -2.54 -15.24 0)
-				(length 2.54)
-				(name "I2C.CLK"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "4"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin bidirectional line
-				(at -2.54 -17.78 0)
-				(length 2.54)
-				(name "I2C.DAT"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "5"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin output line
-				(at -2.54 -20.32 0)
-				(length 2.54)
-				(name "SPI.MISO"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "6"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin input line
-				(at -2.54 -22.86 0)
-				(length 2.54)
-				(name "SPI.CLK"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "7"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin input line
-				(at -2.54 -25.4 0)
-				(length 2.54)
-				(name "SPI.CS"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "8"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin input line
-				(at -2.54 -27.94 0)
-				(length 2.54)
-				(name "SPI.MOSI"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "9"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(text "1.8-3.3V"
-				(at 13.97 -2.54 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-		)
-		(embedded_fonts no)
-	)
-	(symbol "Sense.HR"
-		(pin_names (offset 0.762))
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(property "Reference" "T"
-			(at 0 3.81 0)
-			(effects (font (size 1.27 1.27)) (justify left))
-		)
-		(property "Value" "Sense.HR"
-			(at 0 1.27 0)
-			(effects (font (size 1.27 1.27)) (justify left))
-		)
-		(property "Footprint" "Bergsonne Tiles:T44-10"
-			(at 0 -31.75 0)
-			(effects (font (size 1.27 1.27)) (justify left) (hide yes))
-		)
-		(property "Datasheet" ""
-			(at 0 0 0)
-			(effects (font (size 1.27 1.27)) (hide yes))
-		)
-		(property "Description" ""
-			(at 0 0 0)
-			(effects (font (size 1.27 1.27)) (hide yes))
-		)
-		(property "ki_keywords" "tile bergsonne GND I2C.AD0 I2C.CLK I2C.DAT I2C.EN INTB SPI.CLK SPI.CS SPI.MISO SPI.MOSI V+ VLED"
-			(at 0 0 0)
-			(effects (font (size 1.27 1.27)) (hide yes))
-		)
-		(symbol "Sense.HR_0_1"
-			(rectangle (start 0 0) (end 22.86 -30.48) (stroke (width 0.254) (type default)) (fill (type background)))
-		)
-		(symbol "Sense.HR_1_1"
-			(pin power_in line
-				(at -2.54 -2.54 0)
-				(length 2.54)
-				(name "V+"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "10"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin power_in line
-				(at -2.54 -5.08 0)
-				(length 2.54)
-				(name "VLED"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "9"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin power_in line
-				(at -2.54 -7.62 0)
-				(length 2.54)
-				(name "GND"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "1"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin bidirectional line
-				(at -2.54 -12.7 0)
-				(length 2.54)
-				(name "I2C.AD0"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "2"
-					(effects (font (size 1.27 1.27)))
-				)
-				(alternate "SPI.MISO" bidirectional line)
-			)
-			(pin bidirectional line
-				(at -2.54 -15.24 0)
-				(length 2.54)
-				(name "I2C.EN"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "3"
-					(effects (font (size 1.27 1.27)))
-				)
-				(alternate "SPI.CS" bidirectional line)
-			)
-			(pin bidirectional line
-				(at -2.54 -17.78 0)
-				(length 2.54)
-				(name "I2C.CLK"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "4"
-					(effects (font (size 1.27 1.27)))
-				)
-				(alternate "SPI.CLK" bidirectional line)
-			)
-			(pin bidirectional line
-				(at -2.54 -20.32 0)
-				(length 2.54)
-				(name "I2C.DAT"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "5"
-					(effects (font (size 1.27 1.27)))
-				)
-				(alternate "SPI.MOSI" bidirectional line)
-			)
-			(pin no_connect line
-				(at -2.54 -22.86 0)
-				(length 2.54)
-				(hide yes)
-				(name ""
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "6"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin no_connect line
-				(at -2.54 -25.4 0)
-				(length 2.54)
-				(hide yes)
-				(name ""
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "7"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin output line
-				(at -2.54 -27.94 0)
-				(length 2.54)
-				(name "INTB"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "8"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(text "1.7-2V"
-				(at 12.7 -2.54 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-			(text "2.7-5.5V"
-				(at 12.7 -5.08 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-			(text "SPI.MISO"
-				(at 12.7 -12.7 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-			(text "SPI.CS"
-				(at 12.7 -15.24 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-			(text "SPI.CLK"
-				(at 12.7 -17.78 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-			(text "SPI.MOSI"
-				(at 12.7 -20.32 0)
-				(effects (font (size 1.27 1.27)) (justify left))
-			)
-		)
-		(embedded_fonts no)
-	)
-	(symbol "Sense.M.3G"
-		(pin_names (offset 0.762))
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(property "Reference" "T"
-			(at 0 3.81 0)
-			(effects (font (size 1.27 1.27)) (justify left))
-		)
-		(property "Value" "Sense.M.3G"
-			(at 0 1.27 0)
-			(effects (font (size 1.27 1.27)) (justify left))
-		)
-		(property "Footprint" "Bergsonne Tiles:T44-10"
-			(at 0 -31.75 0)
-			(effects (font (size 1.27 1.27)) (justify left) (hide yes))
-		)
-		(property "Datasheet" ""
-			(at 0 0 0)
-			(effects (font (size 1.27 1.27)) (hide yes))
-		)
-		(property "Description" ""
-			(at 0 0 0)
-			(effects (font (size 1.27 1.27)) (hide yes))
-		)
-		(property "ki_keywords" "tile bergsonne GND I2C.CLK I2C.DAT INT V+"
-			(at 0 0 0)
-			(effects (font (size 1.27 1.27)) (hide yes))
-		)
-		(symbol "Sense.M.3G_0_1"
-			(rectangle (start 0 0) (end 25.4 -30.48) (stroke (width 0.254) (type default)) (fill (type background)))
-		)
-		(symbol "Sense.M.3G_1_1"
-			(pin power_in line
-				(at -2.54 -2.54 0)
-				(length 2.54)
-				(name "V+"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "10"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin power_in line
-				(at -2.54 -5.08 0)
-				(length 2.54)
-				(name "GND"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "1"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin no_connect line
-				(at -2.54 -10.16 0)
-				(length 2.54)
-				(hide yes)
-				(name ""
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "2"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin no_connect line
-				(at -2.54 -12.7 0)
-				(length 2.54)
-				(hide yes)
-				(name ""
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "3"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin bidirectional line
-				(at -2.54 -15.24 0)
-				(length 2.54)
-				(name "I2C.CLK"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "4"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin bidirectional line
-				(at -2.54 -17.78 0)
-				(length 2.54)
-				(name "I2C.DAT"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "5"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin no_connect line
-				(at -2.54 -20.32 0)
-				(length 2.54)
-				(hide yes)
-				(name ""
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "6"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin no_connect line
-				(at -2.54 -22.86 0)
-				(length 2.54)
-				(hide yes)
-				(name ""
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "7"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin no_connect line
-				(at -2.54 -25.4 0)
-				(length 2.54)
-				(hide yes)
-				(name ""
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "8"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin output line
-				(at -2.54 -27.94 0)
-				(length 2.54)
-				(name "INT"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "9"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(text "1.72-3.6V"
-				(at 12.7 -2.54 0)
 				(effects (font (size 1.27 1.27)) (justify left))
 			)
 		)
