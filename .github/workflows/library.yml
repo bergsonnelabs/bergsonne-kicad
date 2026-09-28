@@ -1,0 +1,26 @@
+name: library
+
+# Required check for main: both libraries load in KiCad, and every symbol's
+# pins match its footprint's pads. Sync PRs from the tiles repo auto-merge on
+# green.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  library-ok:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Symbols and footprints match
+        run: python3 tools/check_library.py
+
+      # kicad-cli exits non-zero when a library fails to parse.
+      - name: KiCad loads both libraries
+        run: |
+          img=kicad/kicad:9.0
+          docker run --rm -v "$PWD:/work:ro" -w /work $img kicad-cli sym export svg -o /tmp/sym "Bergsonne Tiles.kicad_sym"
+          docker run --rm -v "$PWD:/work:ro" -w /work $img kicad-cli fp export svg -o /tmp/fp "Bergsonne Tiles.pretty"
