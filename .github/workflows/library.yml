@@ -21,6 +21,6 @@ jobs:
       # kicad-cli exits non-zero when a library fails to parse.
       - name: KiCad loads both libraries
         run: |
-          docker run --rm -v "$PWD:/lib:ro" -w /lib kicad/kicad:9.0 bash -c '
-            kicad-cli sym export svg -o /tmp/sym "Bergsonne Tiles.kicad_sym" &&
-            kicad-cli fp export svg -o /tmp/fp "Bergsonne Tiles.pretty"'
+          img=kicad/kicad:9.0
+          docker run --rm -v "$PWD:/lib:ro" -w /lib $img kicad-cli sym export svg -o /tmp/sym "Bergsonne Tiles.kicad_sym"
+          docker run --rm -v "$PWD:/lib:ro" -w /lib $img kicad-cli fp export svg -o /tmp/fp "Bergsonne Tiles.pretty"
