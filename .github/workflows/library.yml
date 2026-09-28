@@ -22,5 +22,5 @@ jobs:
       - name: KiCad loads both libraries
         run: |
           img=kicad/kicad:9.0
-          docker run --rm -v "$PWD:/lib:ro" -w /lib $img kicad-cli sym export svg -o /tmp/sym "Bergsonne Tiles.kicad_sym"
-          docker run --rm -v "$PWD:/lib:ro" -w /lib $img kicad-cli fp export svg -o /tmp/fp "Bergsonne Tiles.pretty"
+          docker run --rm -v "$PWD:/work:ro" -w /work $img kicad-cli sym export svg -o /tmp/sym "Bergsonne Tiles.kicad_sym"
+          docker run --rm -v "$PWD:/work:ro" -w /work $img kicad-cli fp export svg -o /tmp/fp "Bergsonne Tiles.pretty"
