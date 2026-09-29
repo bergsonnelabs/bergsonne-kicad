@@ -820,6 +820,432 @@
 		)
 		(embedded_fonts no)
 	)
+	(symbol "Core.ST.L4.2"
+		(pin_names (offset 0.762))
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "T"
+			(at 0 3.81 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "Core.ST.L4.2"
+			(at 0 1.27 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Footprint" "Bergsonne Tiles:T48-22"
+			(at 0 -62.23 0)
+			(effects (font (size 1.27 1.27)) (justify left) (hide yes))
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(property "ki_keywords" "tile bergsonne A0 A1 A11 A12 A13 A14 A2 A3 A4 A5 A6 A7 ADC10 ADC11 ADC12 ADC15 ADC16 ADC5 ADC6 ADC7 ADC8 ADC9 B0 B1 B3 B4 B6 B7 BOOT0 COMP1.+ COMP1.- COMP1.IN- COMP1.OUT G2.IO1 G2.IO3 G2.IO4 GND I2C1.CLK I2C1.DAT I2C1.SMBA I2C3.CLK I2C3.DAT LPTIM1.2 LPTIM1.ETR LPTIM1.OUT LPTIM2.1 LPTIM2.ETR LPTIM2.OUT LPUART1.CTS LPUART1.RTS_DE LPUART1.RX LPUART1.TX NRST PH3 QSPI.CLK QSPI.CS QSPI.IO0 QSPI.IO1 QSPI.IO2 QSPI.IO3 SPI1.CLK SPI1.CS SPI1.MISO SPI1.MOSI SWCLK SWDIO TIM1.1N TIM1.2N TIM1.3N TIM1.4 TIM1.BKIN TIM1.BKIN2 TIM1.BKIN2_COMP1 TIM1.ETR TIM15.1 TIM15.1N TIM15.2 TIM16.1 TIM16.1N TIM2.1 TIM2.2 TIM2.3 TIM2.4 TIM2.ETR TRACE.CK TRACE.D0 TRACE.D1 TRACE.D3 TRACE.SWO USART1.CTS USART1.RTS_DE USART1.RX USART1.TX USART2.CTS USART2.RTS_DE USART2.RX USART2.TX USB.DM USB.DP V+"
+			(at 0 0 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(symbol "Core.ST.L4.2_0_1"
+			(rectangle (start 0 0) (end 73.66 -60.96) (stroke (width 0.254) (type default)) (fill (type background)))
+		)
+		(symbol "Core.ST.L4.2_1_1"
+			(pin power_in line
+				(at -2.54 -2.54 0)
+				(length 2.54)
+				(name "V+"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "20"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin power_in line
+				(at -2.54 -5.08 0)
+				(length 2.54)
+				(name "GND"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "1"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin bidirectional line
+				(at -2.54 -10.16 0)
+				(length 2.54)
+				(name "A7"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "2"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "I2C3.CLK" bidirectional line)
+				(alternate "SPI1.MOSI" bidirectional line)
+				(alternate "ADC12" input line)
+				(alternate "TIM1.1N" output line)
+				(alternate "QSPI.IO2" bidirectional line)
+			)
+			(pin bidirectional line
+				(at -2.54 -12.7 0)
+				(length 2.54)
+				(name "A1"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "3"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "I2C1.SMBA" bidirectional line)
+				(alternate "SPI1.CLK" bidirectional line)
+				(alternate "ADC6" input line)
+				(alternate "TIM2.2" output line)
+				(alternate "TIM15.1N" output line)
+				(alternate "COMP1.+" input line)
+				(alternate "USART2.RTS_DE" bidirectional line)
+			)
+			(pin bidirectional line
+				(at -2.54 -15.24 0)
+				(length 2.54)
+				(name "B6"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "4"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "I2C1.CLK" bidirectional line)
+				(alternate "TIM16.1N" output line)
+				(alternate "LPTIM1.ETR" input line)
+				(alternate "USART1.TX" output line)
+				(alternate "G2.IO3" passive line)
+				(alternate "TRACE.D3" passive line)
+			)
+			(pin bidirectional line
+				(at -2.54 -17.78 0)
+				(length 2.54)
+				(name "B7"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "5"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "I2C1.DAT" bidirectional line)
+				(alternate "LPTIM1.2" output line)
+				(alternate "USART1.RX" input line)
+				(alternate "TRACE.CK" passive line)
+				(alternate "G2.IO4" passive line)
+			)
+			(pin bidirectional line
+				(at -2.54 -20.32 0)
+				(length 2.54)
+				(name "A3"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "6"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "QSPI.CLK" bidirectional line)
+				(alternate "ADC8" input line)
+				(alternate "TIM2.4" passive line)
+				(alternate "TIM15.2" passive line)
+				(alternate "USART2.RX" bidirectional line)
+				(alternate "LPUART1.RX" bidirectional line)
+			)
+			(pin bidirectional line
+				(at -2.54 -22.86 0)
+				(length 2.54)
+				(name "A2"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "7"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "QSPI.CS" bidirectional line)
+				(alternate "ADC7" input line)
+				(alternate "TIM2.3" passive line)
+				(alternate "TIM15.1" passive line)
+				(alternate "USART2.TX" bidirectional line)
+				(alternate "LPUART1.TX" bidirectional line)
+			)
+			(pin bidirectional line
+				(at -2.54 -25.4 0)
+				(length 2.54)
+				(name "A0"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "8"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "ADC5" passive line)
+				(alternate "TIM2.1" passive line)
+				(alternate "TIM2.ETR" passive line)
+				(alternate "USART2.CTS" bidirectional line)
+				(alternate "COMP1.IN-" passive line)
+				(alternate "COMP1.OUT" passive line)
+			)
+			(pin bidirectional line
+				(at -2.54 -27.94 0)
+				(length 2.54)
+				(name "A6"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "9"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "SPI1.MISO" output line)
+				(alternate "QSPI.IO3" bidirectional line)
+				(alternate "ADC11" passive line)
+				(alternate "TIM1.BKIN" passive line)
+				(alternate "TIM16.1" passive line)
+				(alternate "LPUART1.CTS" bidirectional line)
+				(alternate "COMP1.OUT" passive line)
+			)
+			(pin bidirectional line
+				(at -2.54 -30.48 0)
+				(length 2.54)
+				(name "A5"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "10"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "SPI1.CLK" bidirectional line)
+				(alternate "ADC10" passive line)
+				(alternate "TIM2.1" passive line)
+				(alternate "TIM2.ETR" passive line)
+				(alternate "LPTIM2.ETR" passive line)
+				(alternate "COMP1.IN-" passive line)
+			)
+			(pin bidirectional line
+				(at -2.54 -33.02 0)
+				(length 2.54)
+				(name "B0"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "11"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "TRACE.D0" passive line)
+				(alternate "SPI1.CS" bidirectional line)
+				(alternate "QSPI.IO1" bidirectional line)
+				(alternate "ADC15" passive line)
+				(alternate "TIM1.2N" passive line)
+				(alternate "COMP1.OUT" passive line)
+			)
+			(pin bidirectional line
+				(at -2.54 -35.56 0)
+				(length 2.54)
+				(name "B3"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "12"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "TRACE.SWO" passive line)
+				(alternate "SPI1.CLK" bidirectional line)
+				(alternate "TIM2.2" passive line)
+				(alternate "USART1.RTS_DE" bidirectional line)
+			)
+			(pin bidirectional line
+				(at -2.54 -38.1 0)
+				(length 2.54)
+				(name "A14"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "13"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "SWCLK" passive line)
+				(alternate "I2C1.SMBA" bidirectional line)
+				(alternate "LPTIM1.OUT" passive line)
+			)
+			(pin bidirectional line
+				(at -2.54 -40.64 0)
+				(length 2.54)
+				(name "A13"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "14"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "SWDIO" passive line)
+			)
+			(pin bidirectional line
+				(at -2.54 -43.18 0)
+				(length 2.54)
+				(name "B1"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "15"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "TRACE.D1" passive line)
+				(alternate "QSPI.IO0" bidirectional line)
+				(alternate "ADC16" passive line)
+				(alternate "TIM1.3N" passive line)
+				(alternate "LPTIM2.1" passive line)
+				(alternate "LPUART1.RTS_DE" bidirectional line)
+			)
+			(pin bidirectional line
+				(at -2.54 -45.72 0)
+				(length 2.54)
+				(name "A12"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "16"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "SPI1.MOSI" output line)
+				(alternate "TIM1.ETR" input line)
+				(alternate "USART1.RTS_DE" bidirectional line)
+				(alternate "USB.DP" bidirectional line)
+			)
+			(pin bidirectional line
+				(at -2.54 -48.26 0)
+				(length 2.54)
+				(name "A11"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "17"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "SPI1.MISO" output line)
+				(alternate "TIM1.4" output line)
+				(alternate "TIM1.BKIN2" input line)
+				(alternate "TIM1.BKIN2_COMP1" input line)
+				(alternate "USART1.CTS" bidirectional line)
+				(alternate "COMP1.OUT" output line)
+				(alternate "USB.DM" bidirectional line)
+			)
+			(pin bidirectional line
+				(at -2.54 -50.8 0)
+				(length 2.54)
+				(name "B4"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "18"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "I2C3.DAT" bidirectional line)
+				(alternate "SPI1.MISO" output line)
+				(alternate "USART1.CTS" bidirectional line)
+				(alternate "G2.IO1" passive line)
+			)
+			(pin bidirectional line
+				(at -2.54 -53.34 0)
+				(length 2.54)
+				(name "A4"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "19"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "SPI1.CS" bidirectional line)
+				(alternate "ADC9" input line)
+				(alternate "LPTIM2.OUT" output line)
+				(alternate "COMP1.-" input line)
+			)
+			(pin bidirectional line
+				(at -2.54 -55.88 0)
+				(length 2.54)
+				(name "BOOT0"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "21"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "PH3" bidirectional line)
+			)
+			(pin passive line
+				(at -2.54 -58.42 0)
+				(length 2.54)
+				(name "NRST"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "22"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(text "1.8-3.6V"
+				(at 10.16 -2.54 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "I2C3.CLK, SPI1.MOSI, ADC12, TIM1.1N, QSPI.IO2"
+				(at 10.16 -10.16 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "I2C1.SMBA, SPI1.CLK, ADC6, TIM2.2/15.1N, USART2.RTS_DE"
+				(at 10.16 -12.7 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "I2C1.CLK, TIM16.1N, USART1.TX"
+				(at 10.16 -15.24 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "I2C1.DAT, USART1.RX"
+				(at 10.16 -17.78 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "QSPI.CLK, ADC8, TIM2.4/15.2, USART2.RX, LPUART1.RX"
+				(at 10.16 -20.32 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "QSPI.CS, ADC7, TIM2.3/15.1, USART2.TX, LPUART1.TX"
+				(at 10.16 -22.86 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "ADC5, TIM2.1/2.ETR, USART2.CTS"
+				(at 10.16 -25.4 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "SPI1.MISO, QSPI.IO3, ADC11, TIM1.BKIN/16.1, LPUART1.CTS"
+				(at 10.16 -27.94 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "SPI1.CLK, ADC10, TIM2.1/2.ETR"
+				(at 10.16 -30.48 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "SPI1.CS, QSPI.IO1, ADC15, TIM1.2N"
+				(at 10.16 -33.02 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "SPI1.CLK, TIM2.2, USART1.RTS_DE"
+				(at 10.16 -35.56 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "SWCLK, I2C1.SMBA"
+				(at 10.16 -38.1 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "SWDIO"
+				(at 10.16 -40.64 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "QSPI.IO0, ADC16, TIM1.3N, LPUART1.RTS_DE"
+				(at 10.16 -43.18 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "SPI1.MOSI, TIM1.ETR, USART1.RTS_DE, USB.DP"
+				(at 10.16 -45.72 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "SPI1.MISO, TIM1.4/1.BKIN2/1.BKIN2_COMP1, USART1.CTS, USB.DM"
+				(at 10.16 -48.26 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "I2C3.DAT, SPI1.MISO, USART1.CTS"
+				(at 10.16 -50.8 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "SPI1.CS, ADC9"
+				(at 10.16 -53.34 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+		)
+		(embedded_fonts no)
+	)
 	(symbol "Core.ST.W5-b"
 		(pin_names (offset 0.762))
 		(exclude_from_sim no)
