@@ -35,5 +35,5 @@ here; open an issue instead and we'll fix the source.
 
 ## Footprints
 
-The footprints are drawn by hand. Pads extend 0.1 mm past the tile edge on
-purpose, which leaves room for a solder fillet.
+The footprints are designed to extend the pads by 0.1 mm past the tile edge to
+leave room for a visible/probe-able solder fillet.
