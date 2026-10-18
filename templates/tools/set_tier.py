@@ -141,7 +141,7 @@ def main(argv):
     if pkg_name not in gen.PACKAGES:
         die("TILE_PACKAGE text variable is '%s'; pass --package with one of %s" % (pkg_name, ", ".join(gen.PACKAGES)))
     pkg = gen.PACKAGES[pkg_name]
-    old_tier = tv.get("FAB_TIER", "?")
+    old_tier = tv.get("FAB_TIER") or "untiered"
     pcb = pcb_path.read_text()
     if tier["layers"] < copper_layer_count(pcb):
         die("board has %d copper layers; tier %s has %d. Going down is not automated." % (copper_layer_count(pcb), tier_name, tier["layers"]))
