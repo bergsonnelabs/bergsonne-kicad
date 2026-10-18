@@ -53,6 +53,31 @@ library installed under the `Bergsonne` nickname.
 5. Order exactly as the "ORDER AT PCBWAY AS" note on the Cmts.User layer says.
    The same text is in `FAB_QUOTE` and in the title block.
 
+## Which tier, in which order
+
+1. Name the problem. Crossing (nets cannot get past each other, power
+   cannot reach) is fixed by layers. Escape (a pad on a fine-pitch part
+   cannot be reached from the surface) is fixed by part choice or HDI.
+2. Do the arithmetic on the finest-pitch part. A track passes between pads
+   when pitch minus pad >= track + 2 x clearance (0.30 mm at 4/4 mil,
+   0.225 mm at 3/3). A dog-bone via fits between four pads when
+   0.707 x pitch >= pad/2 + clearance + via pad/2 (about 0.65 mm pitch for
+   a 0.35 mm via, 0.5 mm for a 0.25 mm microvia at 3/3). At 0.4 mm pitch
+   nothing passes and nothing fits: only the outer ring escapes, every
+   interior ball needs a microvia in its pad, which is HDI. The finest
+   part sets the floor tier, so choose parts with the tier in mind.
+3. For crossing, go to `4L` before any fine feature: $162 at 4-5 days with
+   express, against `2L-fine` at $172, 7-8 days, no express.
+4. When you go fine, take 3/3 mil and 0.15 mm drills together: on the
+   advanced form they cost the same. Never order a fine feature on the
+   standard form.
+5. HDI is for via-in-pad, not for density.
+6. Nothing with a 0.15 mm drill can be rushed; a `4L` board can ship in
+   48 hours.
+
+Sequence: `2L`, `4L`, `4L-fine`, `4L-HDI`. `2L-fine` only when the single
+tight spot is one 0.5 mm pitch part.
+
 ## Upgrading the tier
 
 Every project starts at `2L`. When it will not route, close the project in
