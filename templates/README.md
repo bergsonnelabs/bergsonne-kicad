@@ -69,8 +69,10 @@ library installed under the `Bergsonne` nickname.
 3. For crossing, go to `4L` before any fine feature: $162 at 4-5 days with
    express, against `2L-fine` at $172, 7-8 days, no express.
 4. When you go fine, take 3/3 mil and 0.15 mm drills together: on the
-   advanced form they cost the same. Never order a fine feature on the
-   standard form.
+   advanced form they cost the same ($172 on 2L whether you take one or
+   both; standard form: 3/3 alone $199, 0.15 alone $260). Never order a
+   fine feature on the standard form. 3/3 mil is the knob with routing
+   value; the 0.15 mm drill alone only takes 0.05 mm off each via pad.
 5. HDI is for via-in-pad, not for density.
 6. Nothing with a 0.15 mm drill can be rushed; a `4L` board can ship in
    48 hours.
