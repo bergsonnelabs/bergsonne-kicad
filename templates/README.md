@@ -148,11 +148,16 @@ dollar; express is the fastest paid option, none for the fine tiers):
 
 | Tier | Order where | Options | Regular | Express |
 |---|---|---|---|---|
+| `proto` | standard | HASL lead-free, 1.0 mm (0.6 mm: $18, 3-4 days), 4/4 mil, 0.2 mm hole | $18, 24 h | $105 12 h |
 | `2L` | standard | 4/4 mil, 0.2 mm hole | $102, 3-4 days | $136 48 h, $172 24 h |
 | `2L-fine` | advanced, through-hole | 3/3 mil, 0.15 mm hole | $172, 7-8 days | none |
 | `4L` | standard | 4/4 mil, **0.2 mm hole** | $162, 4-5 days | $213 72 h, $262 48 h |
 | `4L-fine` | advanced, through-hole | 3/3 mil, 0.15 mm hole | $290, 8-9 days | none |
 | `4L-HDI` | advanced, HDI 1+N+1 | 3/3 mil, 0.15 mm, via-in-pad | $646, 8-9 days | none |
+
+`proto` is for proving a circuit, not for a tile: HASL at 0.4 mm is the $168
+bucket, so the board must be 0.6 mm or thicker, and HASL will not take fine
+pitch WLCSP or 0.15 mm drills.
 
 The `4L` tier in the generator currently uses a 0.15 mm drill; on the
 standard form that is the $419 bucket, so it should move to 0.2 mm and the
