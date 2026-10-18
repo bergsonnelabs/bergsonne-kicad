@@ -131,6 +131,18 @@ What the data says:
 - HDI is a flat $461.79 (ENIG) with tiny steps for 3/3 mil and 0.15 holes,
   and the same price on 2 or 4 layers.
 
+Express options exist only on the standard calculator and only outside the
+fine-feature buckets (3/3 mil, 0.15 mm hole and 0.4 mm HASL get one 7-9 day
+option and nothing faster; blue mask removes them on 0.4 and 0.6 mm boards):
+
+| Build (ENIG, green, tenting) | Standard | Express |
+|---|---|---|
+| 2L >= 0.6 mm | $44.14, 3-4 days | $81.36 48 h, $116.96 24 h |
+| 2L 0.4 mm | $101.52, 3-4 days | $135.84 48 h, $172.35 24 h |
+| 4L >= 1.0 mm | $81.36, 4-5 days | $138.76 72 h, $190.74 48 h |
+| 4L 0.6 mm | $112.98, 4-5 days | $171.38 72 h, $221.91 48 h |
+| 4L 0.4 mm | $161.88, 4-5 days | $212.84 72 h, $261.54 48 h |
+
 Tiers this suggests (ENIG, 0.4 mm, per 10-piece panel):
 
 | Tier | Order where | Options | Price, lead |
