@@ -143,15 +143,16 @@ option and nothing faster; blue mask removes them on 0.4 and 0.6 mm boards):
 | 4L 0.6 mm | $112.98, 4-5 days | $171.38 72 h, $221.91 48 h |
 | 4L 0.4 mm | $161.88, 4-5 days | $212.84 72 h, $261.54 48 h |
 
-Tiers this suggests (ENIG, 0.4 mm, per 10-piece panel):
+Tiers this suggests (ENIG, 0.4 mm, per 10-piece panel, rounded to the
+dollar; express is the fastest paid option, none for the fine tiers):
 
-| Tier | Order where | Options | Price, lead |
-|---|---|---|---|
-| `2L` | standard | 4/4 mil, 0.2 mm hole | $101.52, 3-4 days |
-| `2L-fine` | advanced, through-hole | 3/3 mil, 0.15 mm hole | $171.62, 7-8 days |
-| `4L` | standard | 4/4 mil, **0.2 mm hole** | $161.88, 4-5 days |
-| `4L-fine` | advanced, through-hole | 3/3 mil, 0.15 mm hole | $290.00, 8-9 days |
-| `4L-HDI` | advanced, HDI | 3/3 mil, 0.15 mm, via-in-pad | $646.39, 8-9 days |
+| Tier | Order where | Options | Regular | Express |
+|---|---|---|---|---|
+| `2L` | standard | 4/4 mil, 0.2 mm hole | $102, 3-4 days | $136 48 h, $172 24 h |
+| `2L-fine` | advanced, through-hole | 3/3 mil, 0.15 mm hole | $172, 7-8 days | none |
+| `4L` | standard | 4/4 mil, **0.2 mm hole** | $162, 4-5 days | $213 72 h, $262 48 h |
+| `4L-fine` | advanced, through-hole | 3/3 mil, 0.15 mm hole | $290, 8-9 days | none |
+| `4L-HDI` | advanced, HDI 1+N+1 | 3/3 mil, 0.15 mm, via-in-pad | $646, 8-9 days | none |
 
 The `4L` tier in the generator currently uses a 0.15 mm drill; on the
 standard form that is the $419 bucket, so it should move to 0.2 mm and the
