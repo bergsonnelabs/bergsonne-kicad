@@ -97,12 +97,53 @@ silkscreen on the bottom only.
 | `4L` | 4 | 0.10 mm (4/4 mil) | 0.15 | 0.35 / 0.15 | none | 4 layers, 0.4 mm, 4/4 mil, min hole 0.15, ENIG, through vias only |
 | `4L-HDI` | 4 (1+2+1) | 0.075 mm (3/3 mil) | 0.15 (mech.) | 0.35 / 0.15 | 0.25 / 0.10 laser, F.Cu-In1.Cu and In2.Cu-B.Cu, via-in-pad OK | 4 layers HDI 1+2+1, 0.4 mm, 3/3 mil, laser via 0.1, ENIG |
 
-Price breakpoints these encode: 4/4 mil is the base track option and 3/3 mil
-is the one step up; 0.2 mm is the base drill and 0.15 mm the one step up; a
-4-layer board at 0.4 mm is already a thin-multilayer build, so the 4L tier
-includes the 0.15 drill; HDI is quoted as an advanced PCB. Still open: PCBWay
-has sometimes asked for 0.1 mm mechanical drills; not encoded until it is
-understood.
+Price breakpoints, measured on 2026-10-18 (10 pcs of 98.2 x 98.2 mm, Tg150,
+1 oz, ENIG, green, tenting; raw data in `fab/`). The two calculators price
+the same board differently, so the table says which one to use.
+
+| Build | Standard calculator | Advanced calculator (through-hole) |
+|---|---|---|
+| 2L 0.4 mm, 4/4 mil, 0.2 mm hole | **$101.52, 3-4 days** | $171.62, 7-8 days |
+| 2L 0.4 mm, 3/3 mil, 0.2 mm hole | $198.71, 7-8 days | **$171.62, 7-8 days** |
+| 2L 0.4 mm, any, 0.15 mm hole | $259.56, 7-8 days | **$171.62, 7-8 days** |
+| 4L 0.4 mm, 4/4 mil, 0.2 mm hole | **$161.88, 4-5 days** | $290.00, 8-9 days |
+| 4L 0.4 mm, 3/3 mil, 0.2 mm hole | $358.16, 8-9 days | **$290.00, 8-9 days** |
+| 4L 0.4 mm, any, 0.15 mm hole | $419.01, 8-9 days | **$290.00, 8-9 days** |
+| 4L HDI 1+N+1 (advanced only), 4/4, 0.2 | n/a | $461.79, 8-9 days |
+| 4L HDI, 3/3 or 0.15 | n/a | +$7.10 per step (max $475.99) |
+| via-in-pad (advanced only) | n/a | +$170 (HDI), +$151 to +$183 (through-hole) |
+
+What the data says:
+
+- On the standard calculator the fab options are buckets, not increments:
+  3/3 mil moves a 2L board to a flat $198.71 and 0.15 mm holes to a flat
+  $259.56 regardless of thickness; on 4L the same options cost $358.16 and
+  $419.01. Thickness, mask colour and tenting/plugged vias do not change those
+  bucket prices. Blue mask is free but adds about two days.
+- 0.4 mm with HASL is a $168 special on the standard form; with ENIG it is a
+  normal thin build ($101.52 on 2L, $161.88 on 4L). Tiles are ENIG anyway.
+- ENIG costs +$26 on 2L, +$25 on 4L at thickness >= 0.6 mm. Plugged vias
+  +$25. The $18.18 / 24-hour base is 2L, >= 1.0 mm, HASL, 4/4 mil, 0.2 hole.
+- On the advanced calculator the through-hole price ignores thickness,
+  track/space, hole size and mask entirely: $171.62 (2L ENIG) or $290.00
+  (4L ENIG), always 7-9 days. That is why a fine-feature board is cheaper
+  there and a plain one is cheaper on the standard form.
+- HDI is a flat $461.79 (ENIG) with tiny steps for 3/3 mil and 0.15 holes,
+  and the same price on 2 or 4 layers.
+
+Tiers this suggests (ENIG, 0.4 mm, per 10-piece panel):
+
+| Tier | Order where | Options | Price, lead |
+|---|---|---|---|
+| `2L` | standard | 4/4 mil, 0.2 mm hole | $101.52, 3-4 days |
+| `2L-fine` | advanced, through-hole | 3/3 mil, 0.15 mm hole | $171.62, 7-8 days |
+| `4L` | standard | 4/4 mil, **0.2 mm hole** | $161.88, 4-5 days |
+| `4L-fine` | advanced, through-hole | 3/3 mil, 0.15 mm hole | $290.00, 8-9 days |
+| `4L-HDI` | advanced, HDI | 3/3 mil, 0.15 mm, via-in-pad | $646.39, 8-9 days |
+
+The `4L` tier in the generator currently uses a 0.15 mm drill; on the
+standard form that is the $419 bucket, so it should move to 0.2 mm and the
+0.15 mm drill should become `4L-fine` on the advanced form.
 
 Rules common to every tier (Board Setup > Constraints):
 
