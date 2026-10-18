@@ -423,7 +423,7 @@
 		(embedded_fonts no)
 	)
 	)
-	(text "T44-10 tile  -  2-layer standard\nProject > Project Settings > Text Variables: set TILE_FAMILY, TILE_VARIANT, TILE_REV.\nPads P1..P10 are the tile base pads (bottom side). Delete a no-connect flag to use a pad.\nStandard pinout (standard across all 16 T44-10 tiles in the symbol library): P1=GND, P4=I2C.CLK, P5=I2C.DAT, P10=+V.\nFab: 2 layers / 0.4 mm / 4/4 mil / min hole 0.2 mm / ENIG"
+	(text "T44-10 tile  -  2-layer standard\nProject > Project Settings > Text Variables: set TILE_FAMILY, TILE_VARIANT, TILE_REV.\nPads P1..P10 are the tile base pads (bottom side). Delete a no-connect flag to use a pad.\nStandard pinout (standard across all 16 T44-10 tiles in the symbol library): P1=GND, P4=I2C.CLK, P5=I2C.DAT, P10=+V.\nFab: Standard calculator: 2 layers / 0.4 mm / 4/4 mil / min hole 0.2 mm / ENIG / tenting"
 		(exclude_from_sim no)
 		(at 25.4 25.4 0)
 		(effects

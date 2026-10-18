@@ -89,7 +89,7 @@ KiCad and run, from the clone's `templates` folder:
 python3 tools/set_tier.py "/path/to/Sense-XYZ/Sense-XYZ.kicad_pro" 2L-fine
 ```
 
-with `2L-fine`, `4L` or `4L-HDI`. The script
+with `2L-fine`, `4L`, `4L-fine` or `4L-HDI`. The script
 
 - copies the project files to `Sense-XYZ-tier-backup-<old tier>-<time>/`,
 - sets the design rules, netclass widths and the track/via presets,
@@ -105,7 +105,9 @@ already placed are untouched, so DRC tells you nothing new is broken. Right
 after a move to 4 layers DRC warns "Isolated copper fill" for the two new
 planes; that clears once a via ties each plane to its net.
 Tiers only go up; to go back down, restore the backup folder. Jumping tiers
-(`2L` straight to `4L-HDI`) is fine.
+(`2L` straight to `4L-HDI`) is fine. A project that predates the templates
+has no `TILE_PACKAGE` variable: add `--package T44-10` (or whichever
+package) and the script treats it like a template project from then on.
 
 The KiCad-only alternative is Board Setup > Import Settings from Another
 Board, pointing at a project already on the target tier, with "Design rule
@@ -119,10 +121,11 @@ silkscreen on the bottom only.
 
 | Tier | Layers | Track / space | Min hole | Via (pad / drill) | Microvia | Order as |
 |---|---|---|---|---|---|---|
-| `2L` (start here) | 2 | 0.10 mm (4/4 mil) | 0.20 | 0.40 / 0.20 | none | 2 layers, 0.4 mm, 4/4 mil, min hole 0.2, ENIG |
-| `2L-fine` | 2 | 0.075 mm (3/3 mil) | 0.15 | 0.35 / 0.15 | none | 2 layers, 0.4 mm, 3/3 mil, min hole 0.15, ENIG |
-| `4L` | 4 | 0.10 mm (4/4 mil) | 0.15 | 0.35 / 0.15 | none | 4 layers, 0.4 mm, 4/4 mil, min hole 0.15, ENIG, through vias only |
-| `4L-HDI` | 4 (1+2+1) | 0.075 mm (3/3 mil) | 0.15 (mech.) | 0.35 / 0.15 | 0.25 / 0.10 laser, F.Cu-In1.Cu and In2.Cu-B.Cu, via-in-pad OK | 4 layers HDI 1+2+1, 0.4 mm, 3/3 mil, laser via 0.1, ENIG |
+| `2L` | 2 | 0.10 mm (4/4 mil) | 0.20 | 0.40 / 0.20 | none | Standard calculator: 2 layers, 0.4 mm, 4/4 mil, min hole 0.2, ENIG |
+| `2L-fine` | 2 | 0.075 mm (3/3 mil) | 0.15 | 0.35 / 0.15 | none | Advanced calculator, through-hole: 2 layers, 0.4 mm, 3/3 mil, min hole 0.15, ENIG |
+| `4L` | 4 | 0.10 mm (4/4 mil) | 0.20 | 0.40 / 0.20 | none | Standard calculator: 4 layers, 0.4 mm, 4/4 mil, min hole 0.2, ENIG, through vias only |
+| `4L-fine` | 4 | 0.075 mm (3/3 mil) | 0.15 | 0.35 / 0.15 | none | Advanced calculator, through-hole: 4 layers, 0.4 mm, 3/3 mil, min hole 0.15, ENIG |
+| `4L-HDI` | 4 (1+2+1) | 0.075 mm (3/3 mil) | 0.15 (mech.) | 0.35 / 0.15 | 0.25 / 0.10 laser, F.Cu-In1.Cu and In2.Cu-B.Cu, via-in-pad | Advanced calculator, HDI 1+N+1: 4 layers, 0.4 mm, 3/3 mil, laser via 0.1, via-in-pad, ENIG |
 
 Price breakpoints, measured on 2026-10-18 (10 pcs of 98.2 x 98.2 mm, Tg150,
 1 oz, ENIG, green, tenting; raw data in `fab/`). The two calculators price
@@ -182,13 +185,10 @@ dollar; express is the fastest paid option, none for the fine tiers):
 | `4L-fine` | advanced, through-hole | 3/3 mil, 0.15 mm hole | $290, 8-9 days | none |
 | `4L-HDI` | advanced, HDI 1+N+1 | 3/3 mil, 0.15 mm, via-in-pad | $646, 8-9 days | none |
 
+`proto` has no template: it is a `2L` project ordered as 1.0 mm HASL.
 `proto` is for proving a circuit, not for a tile: HASL at 0.4 mm is the $168
 bucket, so the board must be 0.6 mm or thicker, and HASL will not take fine
 pitch WLCSP or 0.15 mm drills.
-
-The `4L` tier in the generator currently uses a 0.15 mm drill; on the
-standard form that is the $419 bucket, so it should move to 0.2 mm and the
-0.15 mm drill should become `4L-fine` on the advanced form.
 
 Rules common to every tier (Board Setup > Constraints):
 

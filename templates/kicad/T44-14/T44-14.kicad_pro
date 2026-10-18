@@ -669,6 +669,6 @@
     "TILE_REV": "a",
     "TILE_PACKAGE": "T44-14",
     "FAB_TIER": "2L",
-    "FAB_QUOTE": "2 layers / 0.4 mm / 4/4 mil / min hole 0.2 mm / ENIG"
+    "FAB_QUOTE": "Standard calculator: 2 layers / 0.4 mm / 4/4 mil / min hole 0.2 mm / ENIG / tenting"
   }
 }

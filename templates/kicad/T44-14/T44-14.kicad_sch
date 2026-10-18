@@ -423,7 +423,7 @@
 		(embedded_fonts no)
 	)
 	)
-	(text "T44-14 tile  -  2-layer standard\nProject > Project Settings > Text Variables: set TILE_FAMILY, TILE_VARIANT, TILE_REV.\nPads P1..P14 are the tile base pads (bottom side). Delete a no-connect flag to use a pad.\nStandard pinout (standard across the three T44-14 core tiles): P1=GND, P10=+V, P12=NRST.\nFab: 2 layers / 0.4 mm / 4/4 mil / min hole 0.2 mm / ENIG"
+	(text "T44-14 tile  -  2-layer standard\nProject > Project Settings > Text Variables: set TILE_FAMILY, TILE_VARIANT, TILE_REV.\nPads P1..P14 are the tile base pads (bottom side). Delete a no-connect flag to use a pad.\nStandard pinout (standard across the three T44-14 core tiles): P1=GND, P10=+V, P12=NRST.\nFab: Standard calculator: 2 layers / 0.4 mm / 4/4 mil / min hole 0.2 mm / ENIG / tenting"
 		(exclude_from_sim no)
 		(at 25.4 25.4 0)
 		(effects
