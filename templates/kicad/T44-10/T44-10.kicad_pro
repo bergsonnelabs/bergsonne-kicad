@@ -664,11 +664,11 @@
     ]
   ],
   "text_variables": {
-    "TILE_FAMILY": "TILE",
-    "TILE_VARIANT": "NAME",
-    "TILE_REV": "a",
-    "TILE_PACKAGE": "T44-10",
+    "FAB_QUOTE": "2 layers / 0.4 mm / 4/4 mil / min hole 0.2 mm / ENIG",
     "FAB_TIER": "2L",
-    "FAB_QUOTE": "2 layers / 0.4 mm / 4/4 mil / min hole 0.2 mm / ENIG"
+    "TILE_FAMILY": "TILE",
+    "TILE_PACKAGE": "T44-10",
+    "TILE_REV": "a",
+    "TILE_VARIANT": "NAME"
   }
 }

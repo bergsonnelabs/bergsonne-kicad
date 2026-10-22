@@ -111,6 +111,7 @@
 			(psnegative no)
 			(psa4output no)
 			(plot_black_and_white yes)
+			(plotinvisibletext no)
 			(sketchpadsonfab no)
 			(plotpadnumbers no)
 			(hidednponfab no)
@@ -124,6 +125,12 @@
 			(outputdirectory "fab/")
 		)
 	)
+	(property "FAB_QUOTE" "2 layers / 0.4 mm / 4/4 mil / min hole 0.2 mm / ENIG")
+	(property "FAB_TIER" "2L")
+	(property "TILE_FAMILY" "TILE")
+	(property "TILE_PACKAGE" "T24-10")
+	(property "TILE_REV" "a")
+	(property "TILE_VARIANT" "NAME")
 	(net 0 "")
 	(net 1 "GND")
 	(net 2 "+V")
@@ -212,14 +219,14 @@
 	)
 	(footprint "Bergsonne:SMD-800-400"
 		(layer "B.Cu")
-		(uuid "c5681efd-b2bd-555b-9ec5-0f2b75c93d4e")
-		(at -0.6 -0.8 180)
-		(property "Reference" "P2"
+		(uuid "81424fad-250d-5ab7-87fe-346b629ee01c")
+		(at 0.6 1.6 180)
+		(property "Reference" "P6"
 			(at 0 0.5 0)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "ecefc814-9539-5f2b-a259-7dfd4bdd31af")
+			(uuid "821ebbc0-98a5-55a1-b99a-d509bb7448bf")
 			(effects
 				(font
 					(size 1 1)
@@ -233,7 +240,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "02337cce-aeab-5506-9130-2d75b2cc844e")
+			(uuid "0d30e825-9af0-58b6-9e1c-0c423fff198c")
 			(effects
 				(font
 					(size 1 1)
@@ -247,7 +254,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "c4e46298-9dd2-5cd1-b58d-9d0a910c94a8")
+			(uuid "47e0c747-1f00-5640-8438-fce0da29576f")
 			(effects
 				(font
 					(size 1 1)
@@ -256,12 +263,12 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "Tile base pad 2"
+		(property "Description" "Tile base pad 6"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "f0829b65-a59a-5673-b7a5-9694a84fbaa4")
+			(uuid "a4bbe483-f574-5b49-ae03-69e2837e4261")
 			(effects
 				(font
 					(size 1 1)
@@ -270,7 +277,7 @@
 				(justify mirror)
 			)
 		)
-		(path "/17b250fd-cb0f-5c35-8eec-5038856b627d")
+		(path "/44474ddc-5ee1-5d56-b5ec-5da973e23205")
 		(sheetname "/")
 		(sheetfile "T24-10.kicad_sch")
 		(attr smd)
@@ -278,160 +285,10 @@
 			(at 0 0 180)
 			(size 0.8 0.4)
 			(layers "B.Cu" "B.Mask" "B.Paste")
-			(net 5 "unconnected-(P2-Pad1)")
+			(net 7 "unconnected-(P6-Pad1)")
 			(pintype "passive")
 			(solder_mask_margin 0)
-			(uuid "64cffec3-f94a-5e7a-a018-d48d031cf8e2")
-		)
-		(embedded_fonts no)
-	)
-	(footprint "Bergsonne:SMD-800-400"
-		(layer "B.Cu")
-		(uuid "e0f0895d-6a62-5cb0-a5cf-a55659ef22c9")
-		(at -0.6 0 180)
-		(property "Reference" "P3"
-			(at 0 0.5 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(hide yes)
-			(uuid "c967cc26-2f4a-5061-8e18-487b27da6c00")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.1)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Value" "~"
-			(at 0 -1 0)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "6f0712c6-0864-5831-9053-167b513dcb90")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Datasheet" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "f5d2b68f-e07b-51ad-a370-5819e7afb2b4")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Description" "Tile base pad 3"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "9946616f-8892-5464-adc8-79f6f190cb77")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(path "/b4e80c81-6c97-5823-826b-4c6bd1468c6b")
-		(sheetname "/")
-		(sheetfile "T24-10.kicad_sch")
-		(attr smd)
-		(pad "1" smd rect
-			(at 0 0 180)
-			(size 0.8 0.4)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(net 6 "unconnected-(P3-Pad1)")
-			(pintype "passive")
-			(solder_mask_margin 0)
-			(uuid "76ff83cb-c0a1-50c2-9159-edc9a62c962e")
-		)
-		(embedded_fonts no)
-	)
-	(footprint "Bergsonne:SMD-800-400"
-		(layer "B.Cu")
-		(uuid "b7417043-e188-5146-9432-47b15d8ba330")
-		(at -0.6 0.8 180)
-		(property "Reference" "P4"
-			(at 0 0.5 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(hide yes)
-			(uuid "53dd08e4-5a7c-5b9c-862a-1c9492022e93")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.1)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Value" "~"
-			(at 0 -1 0)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "b0cc5f7c-bcec-5e67-bc26-016d3c9093ce")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Datasheet" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "2de74af9-81dd-5fdb-a12a-15fa1e4c4ff7")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Description" "Tile base pad 4"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "33fe03fc-d472-5e3e-9ee7-6e80849803c5")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(path "/59916fed-0c02-54ea-9b60-648a94499986")
-		(sheetname "/")
-		(sheetfile "T24-10.kicad_sch")
-		(attr smd)
-		(pad "1" smd rect
-			(at 0 0 180)
-			(size 0.8 0.4)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(net 3 "/I2C.CLK")
-			(pintype "passive")
-			(solder_mask_margin 0)
-			(uuid "a76514a0-1218-5032-be28-1741fb67fadc")
+			(uuid "da0848f5-a2d6-5227-85d8-5997c6963067")
 		)
 		(embedded_fonts no)
 	)
@@ -510,16 +367,16 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Bergsonne:SMD-800-400"
+	(footprint "Bergsonne:SMD-600-400"
 		(layer "B.Cu")
-		(uuid "81424fad-250d-5ab7-87fe-346b629ee01c")
-		(at 0.6 1.6 180)
-		(property "Reference" "P6"
+		(uuid "88138d31-6570-5cea-a45a-431974545060")
+		(at 0.7 -1.6 180)
+		(property "Reference" "P10"
 			(at 0 0.5 0)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "821ebbc0-98a5-55a1-b99a-d509bb7448bf")
+			(uuid "ee1f818a-0c06-5880-aa51-a2e27c41b2d2")
 			(effects
 				(font
 					(size 1 1)
@@ -533,7 +390,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "0d30e825-9af0-58b6-9e1c-0c423fff198c")
+			(uuid "fa21f264-2bc0-5bb5-aa0d-67504475252e")
 			(effects
 				(font
 					(size 1 1)
@@ -547,7 +404,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "47e0c747-1f00-5640-8438-fce0da29576f")
+			(uuid "867fa9c7-e441-581b-81d4-96dc9bf37a96")
 			(effects
 				(font
 					(size 1 1)
@@ -556,12 +413,12 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "Tile base pad 6"
+		(property "Description" "Tile base pad 10"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "a4bbe483-f574-5b49-ae03-69e2837e4261")
+			(uuid "50a878c0-9c82-5f5b-b955-4fa183cfdbfe")
 			(effects
 				(font
 					(size 1 1)
@@ -570,93 +427,18 @@
 				(justify mirror)
 			)
 		)
-		(path "/44474ddc-5ee1-5d56-b5ec-5da973e23205")
+		(path "/c0056086-6b14-5b93-9e7c-36984213c078")
 		(sheetname "/")
 		(sheetfile "T24-10.kicad_sch")
 		(attr smd)
 		(pad "1" smd rect
 			(at 0 0 180)
-			(size 0.8 0.4)
+			(size 0.6 0.4)
 			(layers "B.Cu" "B.Mask" "B.Paste")
-			(net 7 "unconnected-(P6-Pad1)")
+			(net 2 "+V")
 			(pintype "passive")
 			(solder_mask_margin 0)
-			(uuid "da0848f5-a2d6-5227-85d8-5997c6963067")
-		)
-		(embedded_fonts no)
-	)
-	(footprint "Bergsonne:SMD-800-400"
-		(layer "B.Cu")
-		(uuid "e7e254db-b96f-5ace-8340-e249087cd6f8")
-		(at 0.6 0.8 180)
-		(property "Reference" "P7"
-			(at 0 0.5 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(hide yes)
-			(uuid "1145a5e3-43f0-5f64-b4a0-b5635c5f6a54")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.1)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Value" "~"
-			(at 0 -1 0)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "bb580e8c-075a-529e-acfc-8c869c89aac7")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Datasheet" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "722632e8-307a-594f-949c-ab2b7f08899d")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Description" "Tile base pad 7"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "da90bf88-8521-5a80-b6d7-1b44a3ebb0a7")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(path "/34fc93cc-5dd6-5e55-b63f-82acfea7abc8")
-		(sheetname "/")
-		(sheetfile "T24-10.kicad_sch")
-		(attr smd)
-		(pad "1" smd rect
-			(at 0 0 180)
-			(size 0.8 0.4)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(net 8 "unconnected-(P7-Pad1)")
-			(pintype "passive")
-			(solder_mask_margin 0)
-			(uuid "499bc95d-8fc2-5e8e-80e7-240e2ccaa79e")
+			(uuid "85224092-2630-554f-a89f-cde208a33775")
 		)
 		(embedded_fonts no)
 	)
@@ -737,6 +519,156 @@
 	)
 	(footprint "Bergsonne:SMD-800-400"
 		(layer "B.Cu")
+		(uuid "b7417043-e188-5146-9432-47b15d8ba330")
+		(at -0.6 0.8 180)
+		(property "Reference" "P4"
+			(at 0 0.5 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(hide yes)
+			(uuid "53dd08e4-5a7c-5b9c-862a-1c9492022e93")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.1)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Value" "~"
+			(at 0 -1 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b0cc5f7c-bcec-5e67-bc26-016d3c9093ce")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2de74af9-81dd-5fdb-a12a-15fa1e4c4ff7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Description" "Tile base pad 4"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "33fe03fc-d472-5e3e-9ee7-6e80849803c5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(path "/59916fed-0c02-54ea-9b60-648a94499986")
+		(sheetname "/")
+		(sheetfile "T24-10.kicad_sch")
+		(attr smd)
+		(pad "1" smd rect
+			(at 0 0 180)
+			(size 0.8 0.4)
+			(layers "B.Cu" "B.Mask" "B.Paste")
+			(net 3 "/I2C.CLK")
+			(pintype "passive")
+			(solder_mask_margin 0)
+			(uuid "a76514a0-1218-5032-be28-1741fb67fadc")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Bergsonne:SMD-800-400"
+		(layer "B.Cu")
+		(uuid "c5681efd-b2bd-555b-9ec5-0f2b75c93d4e")
+		(at -0.6 -0.8 180)
+		(property "Reference" "P2"
+			(at 0 0.5 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(hide yes)
+			(uuid "ecefc814-9539-5f2b-a259-7dfd4bdd31af")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.1)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Value" "~"
+			(at 0 -1 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "02337cce-aeab-5506-9130-2d75b2cc844e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c4e46298-9dd2-5cd1-b58d-9d0a910c94a8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Description" "Tile base pad 2"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f0829b65-a59a-5673-b7a5-9694a84fbaa4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(path "/17b250fd-cb0f-5c35-8eec-5038856b627d")
+		(sheetname "/")
+		(sheetfile "T24-10.kicad_sch")
+		(attr smd)
+		(pad "1" smd rect
+			(at 0 0 180)
+			(size 0.8 0.4)
+			(layers "B.Cu" "B.Mask" "B.Paste")
+			(net 5 "unconnected-(P2-Pad1)")
+			(pintype "passive")
+			(solder_mask_margin 0)
+			(uuid "64cffec3-f94a-5e7a-a018-d48d031cf8e2")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Bergsonne:SMD-800-400"
+		(layer "B.Cu")
 		(uuid "d75db1e2-0931-5eb4-9825-f6564304dbbc")
 		(at 0.6 -0.8 180)
 		(property "Reference" "P9"
@@ -810,16 +742,16 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Bergsonne:SMD-600-400"
+	(footprint "Bergsonne:SMD-800-400"
 		(layer "B.Cu")
-		(uuid "88138d31-6570-5cea-a45a-431974545060")
-		(at 0.7 -1.6 180)
-		(property "Reference" "P10"
+		(uuid "e0f0895d-6a62-5cb0-a5cf-a55659ef22c9")
+		(at -0.6 0 180)
+		(property "Reference" "P3"
 			(at 0 0.5 0)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "ee1f818a-0c06-5880-aa51-a2e27c41b2d2")
+			(uuid "c967cc26-2f4a-5061-8e18-487b27da6c00")
 			(effects
 				(font
 					(size 1 1)
@@ -833,7 +765,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "fa21f264-2bc0-5bb5-aa0d-67504475252e")
+			(uuid "6f0712c6-0864-5831-9053-167b513dcb90")
 			(effects
 				(font
 					(size 1 1)
@@ -847,7 +779,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "867fa9c7-e441-581b-81d4-96dc9bf37a96")
+			(uuid "f5d2b68f-e07b-51ad-a370-5819e7afb2b4")
 			(effects
 				(font
 					(size 1 1)
@@ -856,12 +788,12 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "Tile base pad 10"
+		(property "Description" "Tile base pad 3"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "50a878c0-9c82-5f5b-b955-4fa183cfdbfe")
+			(uuid "9946616f-8892-5464-adc8-79f6f190cb77")
 			(effects
 				(font
 					(size 1 1)
@@ -870,18 +802,93 @@
 				(justify mirror)
 			)
 		)
-		(path "/c0056086-6b14-5b93-9e7c-36984213c078")
+		(path "/b4e80c81-6c97-5823-826b-4c6bd1468c6b")
 		(sheetname "/")
 		(sheetfile "T24-10.kicad_sch")
 		(attr smd)
 		(pad "1" smd rect
 			(at 0 0 180)
-			(size 0.6 0.4)
+			(size 0.8 0.4)
 			(layers "B.Cu" "B.Mask" "B.Paste")
-			(net 2 "+V")
+			(net 6 "unconnected-(P3-Pad1)")
 			(pintype "passive")
 			(solder_mask_margin 0)
-			(uuid "85224092-2630-554f-a89f-cde208a33775")
+			(uuid "76ff83cb-c0a1-50c2-9159-edc9a62c962e")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "Bergsonne:SMD-800-400"
+		(layer "B.Cu")
+		(uuid "e7e254db-b96f-5ace-8340-e249087cd6f8")
+		(at 0.6 0.8 180)
+		(property "Reference" "P7"
+			(at 0 0.5 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(hide yes)
+			(uuid "1145a5e3-43f0-5f64-b4a0-b5635c5f6a54")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.1)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Value" "~"
+			(at 0 -1 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "bb580e8c-075a-529e-acfc-8c869c89aac7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "722632e8-307a-594f-949c-ab2b7f08899d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Description" "Tile base pad 7"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "da90bf88-8521-5a80-b6d7-1b44a3ebb0a7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(path "/34fc93cc-5dd6-5e55-b63f-82acfea7abc8")
+		(sheetname "/")
+		(sheetfile "T24-10.kicad_sch")
+		(attr smd)
+		(pad "1" smd rect
+			(at 0 0 180)
+			(size 0.8 0.4)
+			(layers "B.Cu" "B.Mask" "B.Paste")
+			(net 8 "unconnected-(P7-Pad1)")
+			(pintype "passive")
+			(solder_mask_margin 0)
+			(uuid "499bc95d-8fc2-5e8e-80e7-240e2ccaa79e")
 		)
 		(embedded_fonts no)
 	)
@@ -907,8 +914,21 @@
 		(layer "User.4")
 		(uuid "d27380ce-a5eb-5b5d-9724-f02d9c8140d4")
 	)
+	(gr_text "P6"
+		(at 1.2 1.6 0)
+		(layer "Cmts.User")
+		(uuid "15aa3311-394e-4d87-9755-5a5295c5d061")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.05)
+				(bold yes)
+			)
+			(justify left)
+		)
+	)
 	(gr_text "T24-10  2-layer standard\nORDER AT PCBWAY AS: 2 layers / 0.4 mm / 4/4 mil / min hole 0.2 mm / ENIG\nFR-4 0.4 mm, 1 oz Cu, ENIG, green mask, white silk (bottom only)\ntrack/space >= 0.1 mm, copper to edge >= 0.15 mm (base pads excepted)\nvia 0.4/0.2 mm, hole-to-hole >= 0.25, copper-to-hole >= 0.15\ncomponents top side only; bottom = base pads + name\npinout: P1=GND, P4=I2C.CLK, P5=I2C.DAT, P10=+V"
-		(at 3 -2 0)
+		(at 4.5466 -1.8542 0)
 		(layer "Cmts.User")
 		(uuid "1e0f84f7-65d0-540f-9243-e60e303419a8")
 		(effects
@@ -917,6 +937,123 @@
 				(thickness 0.08)
 			)
 			(justify left top)
+		)
+	)
+	(gr_text "P4"
+		(at -1.6 0.8 0)
+		(layer "Cmts.User")
+		(uuid "1f05c650-3b02-476a-9797-5fb732833a31")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.05)
+				(bold yes)
+			)
+			(justify left)
+		)
+	)
+	(gr_text "P8"
+		(at 1.2 0 0)
+		(layer "Cmts.User")
+		(uuid "2e789009-06ea-4537-8a97-be68beb8ac70")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.05)
+				(bold yes)
+			)
+			(justify left)
+		)
+	)
+	(gr_text "P9"
+		(at 1.2 -0.8 0)
+		(layer "Cmts.User")
+		(uuid "37feaef5-8999-4905-9051-416d2848237e")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.05)
+				(bold yes)
+			)
+			(justify left)
+		)
+	)
+	(gr_text "P1"
+		(at -1.6 -1.6 0)
+		(layer "Cmts.User")
+		(uuid "4b62b24b-47df-438a-a073-96ca477590a0")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.05)
+				(bold yes)
+			)
+			(justify left)
+		)
+	)
+	(gr_text "P10"
+		(at 1.2 -1.6 0)
+		(layer "Cmts.User")
+		(uuid "53da4ac8-1b3d-4aaa-b448-ed68e8d25e83")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.05)
+				(bold yes)
+			)
+			(justify left)
+		)
+	)
+	(gr_text "P3"
+		(at -1.6 0 0)
+		(layer "Cmts.User")
+		(uuid "54d0d8f7-c0e9-4269-9c10-6360f18a4c54")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.05)
+				(bold yes)
+			)
+			(justify left)
+		)
+	)
+	(gr_text "P2"
+		(at -1.6 -0.8 0)
+		(layer "Cmts.User")
+		(uuid "7014846f-f2bd-45bd-87f2-34e6a764c95a")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.05)
+				(bold yes)
+			)
+			(justify left)
+		)
+	)
+	(gr_text "P5"
+		(at -1.6 1.6 0)
+		(layer "Cmts.User")
+		(uuid "e5076200-1da5-4c8f-8b48-659f2bb2f6c7")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.05)
+				(bold yes)
+			)
+			(justify left)
+		)
+	)
+	(gr_text "P7"
+		(at 1.2 0.8 0)
+		(layer "Cmts.User")
+		(uuid "ffb75b97-0bbc-46f8-b0d0-f4c7b11130df")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.05)
+				(bold yes)
+			)
+			(justify left)
 		)
 	)
 	(embedded_fonts no)
