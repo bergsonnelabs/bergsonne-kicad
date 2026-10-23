@@ -53,6 +53,33 @@ library installed under the `Bergsonne` nickname.
 5. Order exactly as the "ORDER AT PCBWAY AS" note on the Cmts.User layer says.
    The same text is in `FAB_QUOTE` and in the title block.
 
+## Which tier, in which order
+
+1. Name the problem. Crossing (nets cannot get past each other, power
+   cannot reach) is fixed by layers. Escape (a pad on a fine-pitch part
+   cannot be reached from the surface) is fixed by part choice or HDI.
+2. Do the arithmetic on the finest-pitch part. A track passes between pads
+   when pitch minus pad >= track + 2 x clearance (0.30 mm at 4/4 mil,
+   0.225 mm at 3/3). A dog-bone via fits between four pads when
+   0.707 x pitch >= pad/2 + clearance + via pad/2 (about 0.65 mm pitch for
+   a 0.35 mm via, 0.5 mm for a 0.25 mm microvia at 3/3). At 0.4 mm pitch
+   nothing passes and nothing fits: only the outer ring escapes, every
+   interior ball needs a microvia in its pad, which is HDI. The finest
+   part sets the floor tier, so choose parts with the tier in mind.
+3. For crossing, go to `4L` before any fine feature: $162 at 4-5 days with
+   express, against `2L-fine` at $172, 7-8 days, no express.
+4. When you go fine, take 3/3 mil and 0.15 mm drills together: on the
+   advanced form they cost the same ($172 on 2L whether you take one or
+   both; standard form: 3/3 alone $199, 0.15 alone $260). Never order a
+   fine feature on the standard form. 3/3 mil is the knob with routing
+   value; the 0.15 mm drill alone only takes 0.05 mm off each via pad.
+5. HDI is for via-in-pad, not for density.
+6. Nothing with a 0.15 mm drill can be rushed; a `4L` board can ship in
+   48 hours.
+
+Sequence: `2L`, `4L`, `4L-fine`, `4L-HDI`. `2L-fine` only when the single
+tight spot is one 0.5 mm pitch part.
+
 ## Upgrading the tier
 
 Every project starts at `2L`. When it will not route, close the project in
@@ -62,7 +89,7 @@ KiCad and run, from the clone's `templates` folder:
 python3 tools/set_tier.py "/path/to/Sense-XYZ/Sense-XYZ.kicad_pro" 2L-fine
 ```
 
-with `2L-fine`, `4L` or `4L-HDI`. The script
+with `2L-fine`, `4L`, `4L-fine` or `4L-HDI`. The script
 
 - copies the project files to `Sense-XYZ-tier-backup-<old tier>-<time>/`,
 - sets the design rules, netclass widths and the track/via presets,
@@ -78,7 +105,9 @@ already placed are untouched, so DRC tells you nothing new is broken. Right
 after a move to 4 layers DRC warns "Isolated copper fill" for the two new
 planes; that clears once a via ties each plane to its net.
 Tiers only go up; to go back down, restore the backup folder. Jumping tiers
-(`2L` straight to `4L-HDI`) is fine.
+(`2L` straight to `4L-HDI`) is fine. A project that predates the templates
+has no `TILE_PACKAGE` variable: add `--package T44-10` (or whichever
+package) and the script treats it like a template project from then on.
 
 The KiCad-only alternative is Board Setup > Import Settings from Another
 Board, pointing at a project already on the target tier, with "Design rule
@@ -92,17 +121,74 @@ silkscreen on the bottom only.
 
 | Tier | Layers | Track / space | Min hole | Via (pad / drill) | Microvia | Order as |
 |---|---|---|---|---|---|---|
-| `2L` (start here) | 2 | 0.10 mm (4/4 mil) | 0.20 | 0.40 / 0.20 | none | 2 layers, 0.4 mm, 4/4 mil, min hole 0.2, ENIG |
-| `2L-fine` | 2 | 0.075 mm (3/3 mil) | 0.15 | 0.35 / 0.15 | none | 2 layers, 0.4 mm, 3/3 mil, min hole 0.15, ENIG |
-| `4L` | 4 | 0.10 mm (4/4 mil) | 0.15 | 0.35 / 0.15 | none | 4 layers, 0.4 mm, 4/4 mil, min hole 0.15, ENIG, through vias only |
-| `4L-HDI` | 4 (1+2+1) | 0.075 mm (3/3 mil) | 0.15 (mech.) | 0.35 / 0.15 | 0.25 / 0.10 laser, F.Cu-In1.Cu and In2.Cu-B.Cu, via-in-pad OK | 4 layers HDI 1+2+1, 0.4 mm, 3/3 mil, laser via 0.1, ENIG |
+| `2L` | 2 | 0.10 mm (4/4 mil) | 0.20 | 0.40 / 0.20 | none | Standard calculator: 2 layers, 0.4 mm, 4/4 mil, min hole 0.2, ENIG |
+| `2L-fine` | 2 | 0.075 mm (3/3 mil) | 0.15 | 0.35 / 0.15 | none | Advanced calculator, through-hole: 2 layers, 0.4 mm, 3/3 mil, min hole 0.15, ENIG |
+| `4L` | 4 | 0.10 mm (4/4 mil) | 0.20 | 0.40 / 0.20 | none | Standard calculator: 4 layers, 0.4 mm, 4/4 mil, min hole 0.2, ENIG, through vias only |
+| `4L-fine` | 4 | 0.075 mm (3/3 mil) | 0.15 | 0.35 / 0.15 | none | Advanced calculator, through-hole: 4 layers, 0.4 mm, 3/3 mil, min hole 0.15, ENIG |
+| `4L-HDI` | 4 (1+2+1) | 0.075 mm (3/3 mil) | 0.15 (mech.) | 0.35 / 0.15 | 0.25 / 0.10 laser, F.Cu-In1.Cu and In2.Cu-B.Cu, via-in-pad | Advanced calculator, HDI 1+N+1: 4 layers, 0.4 mm, 3/3 mil, laser via 0.1, via-in-pad, ENIG |
 
-Price breakpoints these encode: 4/4 mil is the base track option and 3/3 mil
-is the one step up; 0.2 mm is the base drill and 0.15 mm the one step up; a
-4-layer board at 0.4 mm is already a thin-multilayer build, so the 4L tier
-includes the 0.15 drill; HDI is quoted as an advanced PCB. Still open: PCBWay
-has sometimes asked for 0.1 mm mechanical drills; not encoded until it is
-understood.
+Price breakpoints, measured on 2026-10-18 (10 pcs of 98.2 x 98.2 mm, Tg150,
+1 oz, ENIG, green, tenting; raw data in `fab/`). The two calculators price
+the same board differently, so the table says which one to use.
+
+| Build | Standard calculator | Advanced calculator (through-hole) |
+|---|---|---|
+| 2L 0.4 mm, 4/4 mil, 0.2 mm hole | **$101.52, 3-4 days** | $171.62, 7-8 days |
+| 2L 0.4 mm, 3/3 mil, 0.2 mm hole | $198.71, 7-8 days | **$171.62, 7-8 days** |
+| 2L 0.4 mm, any, 0.15 mm hole | $259.56, 7-8 days | **$171.62, 7-8 days** |
+| 4L 0.4 mm, 4/4 mil, 0.2 mm hole | **$161.88, 4-5 days** | $290.00, 8-9 days |
+| 4L 0.4 mm, 3/3 mil, 0.2 mm hole | $358.16, 8-9 days | **$290.00, 8-9 days** |
+| 4L 0.4 mm, any, 0.15 mm hole | $419.01, 8-9 days | **$290.00, 8-9 days** |
+| 4L HDI 1+N+1 (advanced only), 4/4, 0.2 | n/a | $461.79, 8-9 days |
+| 4L HDI, 3/3 or 0.15 | n/a | +$7.10 per step (max $475.99) |
+| via-in-pad (advanced only) | n/a | +$170 (HDI), +$151 to +$183 (through-hole) |
+
+What the data says:
+
+- On the standard calculator the fab options are buckets, not increments:
+  3/3 mil moves a 2L board to a flat $198.71 and 0.15 mm holes to a flat
+  $259.56 regardless of thickness; on 4L the same options cost $358.16 and
+  $419.01. Thickness, mask colour and tenting/plugged vias do not change those
+  bucket prices. Blue mask is free but adds about two days.
+- 0.4 mm with HASL is a $168 special on the standard form; with ENIG it is a
+  normal thin build ($101.52 on 2L, $161.88 on 4L). Tiles are ENIG anyway.
+- ENIG costs +$26 on 2L, +$25 on 4L at thickness >= 0.6 mm. Plugged vias
+  +$25. The $18.18 / 24-hour base is 2L, >= 1.0 mm, HASL, 4/4 mil, 0.2 hole.
+- On the advanced calculator the through-hole price ignores thickness,
+  track/space, hole size and mask entirely: $171.62 (2L ENIG) or $290.00
+  (4L ENIG), always 7-9 days. That is why a fine-feature board is cheaper
+  there and a plain one is cheaper on the standard form.
+- HDI is a flat $461.79 (ENIG) with tiny steps for 3/3 mil and 0.15 holes,
+  and the same price on 2 or 4 layers.
+
+Express options exist only on the standard calculator and only outside the
+fine-feature buckets (3/3 mil, 0.15 mm hole and 0.4 mm HASL get one 7-9 day
+option and nothing faster; blue mask removes them on 0.4 and 0.6 mm boards):
+
+| Build (ENIG, green, tenting) | Standard | Express |
+|---|---|---|
+| 2L >= 0.6 mm | $44.14, 3-4 days | $81.36 48 h, $116.96 24 h |
+| 2L 0.4 mm | $101.52, 3-4 days | $135.84 48 h, $172.35 24 h |
+| 4L >= 1.0 mm | $81.36, 4-5 days | $138.76 72 h, $190.74 48 h |
+| 4L 0.6 mm | $112.98, 4-5 days | $171.38 72 h, $221.91 48 h |
+| 4L 0.4 mm | $161.88, 4-5 days | $212.84 72 h, $261.54 48 h |
+
+Tiers this suggests (ENIG, 0.4 mm, per 10-piece panel, rounded to the
+dollar; express is the fastest paid option, none for the fine tiers):
+
+| Tier | Order where | Options | Regular | Express |
+|---|---|---|---|---|
+| `proto` | standard | HASL lead-free, 1.0 mm (0.6 mm: $18, 3-4 days), 4/4 mil, 0.2 mm hole | $18, 24 h | $105 12 h |
+| `2L` | standard | 4/4 mil, 0.2 mm hole | $102, 3-4 days | $136 48 h, $172 24 h |
+| `2L-fine` | advanced, through-hole | 3/3 mil, 0.15 mm hole | $172, 7-8 days | none |
+| `4L` | standard | 4/4 mil, **0.2 mm hole** | $162, 4-5 days | $213 72 h, $262 48 h |
+| `4L-fine` | advanced, through-hole | 3/3 mil, 0.15 mm hole | $290, 8-9 days | none |
+| `4L-HDI` | advanced, HDI 1+N+1 | 3/3 mil, 0.15 mm, via-in-pad | $646, 8-9 days | none |
+
+`proto` has no template: it is a `2L` project ordered as 1.0 mm HASL.
+`proto` is for proving a circuit, not for a tile: HASL at 0.4 mm is the $168
+bucket, so the board must be 0.6 mm or thicker, and HASL will not take fine
+pitch WLCSP or 0.15 mm drills.
 
 Rules common to every tier (Board Setup > Constraints):
 
@@ -113,7 +199,7 @@ Rules common to every tier (Board Setup > Constraints):
 | Copper to hole | 0.15 mm | |
 | Via annular ring | 0.10 mm | |
 | Solder mask expansion | 0 | mask-defined pads, as before |
-| Solder mask dam | 0.10 mm | PCBWay normal-difficulty figure; not yet confirmed from an order |
+| Solder mask dam | 0.19 mm | PCBWay DFM reply, Oct 2026: with green, red, yellow or blue mask they only keep a dam when two pads are at least 0.19 mm apart (the capability page says 4 mil). Closer pads get one shared opening. For a WLCSP field that is intended: tick "Allow bridged solder mask apertures between pads" in that footprint so DRC stops reporting it |
 | Silkscreen text | 0.7 mm / 0.05 mm, vertical (T44-14: 0.45 mm) | only the name on the underside; PCBWay's stated minimum is 0.8 / 0.15 |
 | Blind / buried vias | disallowed | on every tier (enable in `.kicad_dru` if an HDI order includes In1-In2 buried vias) |
 
@@ -209,8 +295,8 @@ still produced, just without icons.
 
 - 0.1 mm mechanical drill: understand when PCBWay asks for it, then decide
   whether it is a tier.
-- Solder mask dam 0.1 mm and the 0.25 / 0.15 hole clearances are PCBWay's
-  published numbers, not yet confirmed against an order.
+- The 0.25 / 0.15 mm hole clearances are PCBWay's published numbers, not yet
+  confirmed against an order (the mask dam has been, see the rules table).
 - T24-10 and T48-22 pinouts are inferred; fix the generator when the first
   tile of each exists.
 - Panelization and singulation (saw streets, fiducials) are not part of the

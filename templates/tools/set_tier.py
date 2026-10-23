@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """Move an existing tile project to another fab tier, in place.
 
-    python3 tools/set_tier.py  path/to/Tile.kicad_pro  2L-fine | 4L | 4L-HDI
+    python3 tools/set_tier.py  path/to/Tile.kicad_pro  2L-fine | 4L | 4L-fine | 4L-HDI
+    python3 tools/set_tier.py  path/to/Tile.kicad_pro  4L --package T44-10   # project not made from a template
 
-Close the project in KiCad first. The script rewrites:
+Close the project in KiCad first. --package names the tile package when the
+project has no TILE_PACKAGE text variable (projects that predate the templates).
+--ignore-locks skips the open-in-KiCad check when the lock files are stale. The script rewrites:
   .kicad_pro   design rules, netclasses, track/via presets, FAB_TIER / FAB_QUOTE
   .kicad_dru   generated rules (your own rules below the marker line are kept)
   .kicad_pcb   layer list and stackup (adds In1.Cu / In2.Cu when going to 4 layers,
@@ -70,6 +73,13 @@ def update_board(pcb, pkg_name, pkg, tier_name, tier, notes):
     j = match_paren(pcb, i + 2)
     pcb = pcb[:i] + gen.stackup_block(tier["layers"]).rstrip("\n") + pcb[j:]
     notes.append("stackup rewritten for %d layers" % tier["layers"])
+    # --- solder mask dam (board setup), kept in step with COMMON
+    dam = gen.fmt(gen.COMMON["mask_dam"])
+    if "(solder_mask_min_width " in pcb:
+        pcb = re.sub(r"\(solder_mask_min_width [^)]*\)", "(solder_mask_min_width %s)" % dam, pcb, count=1)
+    else:
+        pcb = pcb.replace("\t\t(pad_to_mask_clearance ", "\t\t(solder_mask_min_width %s)\n\t\t(pad_to_mask_clearance " % dam, 1)
+    notes.append("solder mask minimum web width set to %s mm" % dam)
     # --- planes
     if tier["layers"] == 4:
         nets = {name: int(num) for num, name in re.findall(r'\n\t\(net (\d+) "([^"]*)"\)', pcb)}
@@ -107,8 +117,17 @@ def update_board(pcb, pkg_name, pkg, tier_name, tier, notes):
 
 
 def main(argv):
-    if len(argv) != 3 or argv[2] not in gen.TIERS:
+    args = [a for a in argv[1:] if not a.startswith("--")]
+    flags = [a for a in argv[1:] if a.startswith("--")]
+    package_override = None
+    for i, a in enumerate(argv):
+        if a == "--package" and i + 1 < len(argv):
+            package_override = argv[i + 1]
+            args = [x for x in args if x != package_override]
+    ignore_locks = "--ignore-locks" in flags
+    if len(args) != 2 or args[1] not in gen.TIERS:
         sys.exit(__doc__ + "\ntiers: " + ", ".join(gen.TIERS))
+    argv = [argv[0]] + args
     pro_path = pathlib.Path(argv[1]).resolve()
     tier_name = argv[2]
     tier = gen.TIERS[tier_name]
@@ -120,16 +139,16 @@ def main(argv):
         if not p.exists():
             die("missing %s" % p.name)
     locks = list(pro_path.parent.glob("~*.lck")) + list(pro_path.parent.glob("*.lck"))
-    if locks:
+    if locks and not ignore_locks:
         die("project looks open in KiCad (lock files: %s). Close it first." % ", ".join(l.name for l in locks))
 
     d = json.loads(pro_path.read_text())
     tv = d.get("text_variables", {})
-    pkg_name = tv.get("TILE_PACKAGE")
+    pkg_name = package_override or tv.get("TILE_PACKAGE")
     if pkg_name not in gen.PACKAGES:
-        die("TILE_PACKAGE text variable is '%s'; expected one of %s" % (pkg_name, ", ".join(gen.PACKAGES)))
+        die("TILE_PACKAGE text variable is '%s'; pass --package with one of %s" % (pkg_name, ", ".join(gen.PACKAGES)))
     pkg = gen.PACKAGES[pkg_name]
-    old_tier = tv.get("FAB_TIER", "?")
+    old_tier = tv.get("FAB_TIER") or "untiered"
     pcb = pcb_path.read_text()
     if tier["layers"] < copper_layer_count(pcb):
         die("board has %d copper layers; tier %s has %d. Going down is not automated." % (copper_layer_count(pcb), tier_name, tier["layers"]))

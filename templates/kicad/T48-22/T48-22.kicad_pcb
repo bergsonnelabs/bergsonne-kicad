@@ -81,7 +81,7 @@
 			(dielectric_constraints no)
 		)
 		(pad_to_mask_clearance 0)
-		(solder_mask_min_width 0.1)
+		(solder_mask_min_width 0.19)
 		(allow_soldermask_bridges_in_footprints no)
 		(tenting front back)
 		(pcbplotparams
@@ -1831,7 +1831,7 @@
 			(justify mirror)
 		)
 	)
-	(gr_text "T48-22  2-layer standard\nORDER AT PCBWAY AS: 2 layers / 0.4 mm / 4/4 mil / min hole 0.2 mm / ENIG\nFR-4 0.4 mm, 1 oz Cu, ENIG, green mask, white silk (bottom only)\ntrack/space >= 0.1 mm, copper to edge >= 0.15 mm (base pads excepted)\nvia 0.4/0.2 mm, hole-to-hole >= 0.25, copper-to-hole >= 0.15\ncomponents top side only; bottom = base pads + name\npinout: P1=GND, P20=+V, P22=NRST"
+	(gr_text "T48-22  2-layer standard\nORDER AT PCBWAY AS: Standard calculator: 2 layers / 0.4 mm / 4/4 mil / min hole 0.2 mm / ENIG / tenting\nFR-4 0.4 mm, 1 oz Cu, ENIG, green mask, white silk (bottom only)\ntrack/space >= 0.1 mm, copper to edge >= 0.15 mm (base pads excepted)\nvia 0.4/0.2 mm, hole-to-hole >= 0.25, copper-to-hole >= 0.15\ncomponents top side only; bottom = base pads + name\npinout: P1=GND, P20=+V, P22=NRST"
 		(at 4 -2 0)
 		(layer "Cmts.User")
 		(uuid "9bd35bfe-c325-5ed5-a32b-bcdcc67b46c6")
