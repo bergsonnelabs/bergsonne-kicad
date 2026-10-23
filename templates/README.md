@@ -199,7 +199,7 @@ Rules common to every tier (Board Setup > Constraints):
 | Copper to hole | 0.15 mm | |
 | Via annular ring | 0.10 mm | |
 | Solder mask expansion | 0 | mask-defined pads, as before |
-| Solder mask dam | 0.10 mm | PCBWay normal-difficulty figure; not yet confirmed from an order |
+| Solder mask dam | 0.19 mm | PCBWay DFM reply, Oct 2026: with green, red, yellow or blue mask they only keep a dam when two pads are at least 0.19 mm apart (the capability page says 4 mil). Closer pads get one shared opening. For a WLCSP field that is intended: tick "Allow bridged solder mask apertures between pads" in that footprint so DRC stops reporting it |
 | Silkscreen text | 0.7 mm / 0.05 mm, vertical (T44-14: 0.45 mm) | only the name on the underside; PCBWay's stated minimum is 0.8 / 0.15 |
 | Blind / buried vias | disallowed | on every tier (enable in `.kicad_dru` if an HDI order includes In1-In2 buried vias) |
 
@@ -295,8 +295,8 @@ still produced, just without icons.
 
 - 0.1 mm mechanical drill: understand when PCBWay asks for it, then decide
   whether it is a tier.
-- Solder mask dam 0.1 mm and the 0.25 / 0.15 hole clearances are PCBWay's
-  published numbers, not yet confirmed against an order.
+- The 0.25 / 0.15 mm hole clearances are PCBWay's published numbers, not yet
+  confirmed against an order (the mask dam has been, see the rules table).
 - T24-10 and T48-22 pinouts are inferred; fix the generator when the first
   tile of each exists.
 - Panelization and singulation (saw streets, fiducials) are not part of the

@@ -110,7 +110,7 @@ COMMON = dict(
     hole_clearance=0.15,  # copper to (other) hole
     annular=0.1,
     mask_expansion=0.0,
-    mask_dam=0.1,
+    mask_dam=0.19,        # PCBWay DFM reply, Oct 2026: no dam between pads closer than 0.19 mm (green/red/yellow/blue)
     text_height=0.45,   # the smallest legend (T44-14)
     text_thickness=0.05,
 )

@@ -73,6 +73,13 @@ def update_board(pcb, pkg_name, pkg, tier_name, tier, notes):
     j = match_paren(pcb, i + 2)
     pcb = pcb[:i] + gen.stackup_block(tier["layers"]).rstrip("\n") + pcb[j:]
     notes.append("stackup rewritten for %d layers" % tier["layers"])
+    # --- solder mask dam (board setup), kept in step with COMMON
+    dam = gen.fmt(gen.COMMON["mask_dam"])
+    if "(solder_mask_min_width " in pcb:
+        pcb = re.sub(r"\(solder_mask_min_width [^)]*\)", "(solder_mask_min_width %s)" % dam, pcb, count=1)
+    else:
+        pcb = pcb.replace("\t\t(pad_to_mask_clearance ", "\t\t(solder_mask_min_width %s)\n\t\t(pad_to_mask_clearance " % dam, 1)
+    notes.append("solder mask minimum web width set to %s mm" % dam)
     # --- planes
     if tier["layers"] == 4:
         nets = {name: int(num) for num, name in re.findall(r'\n\t\(net (\d+) "([^"]*)"\)', pcb)}
