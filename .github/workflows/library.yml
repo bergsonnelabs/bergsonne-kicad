@@ -25,12 +25,3 @@ jobs:
           docker run --rm -v "$PWD:/work:ro" -w /work $img kicad-cli sym export svg -o /tmp/sym "Bergsonne Tiles.kicad_sym"
           docker run --rm -v "$PWD:/work:ro" -w /work $img kicad-cli fp export svg -o /tmp/fp "Bergsonne Tiles.pretty"
 
-      - name: Tile templates pass DRC
-        run: |
-          img=kicad/kicad:9.0
-          for t in templates/kicad/*/; do
-            n=$(basename "$t")
-            docker run --rm -v "$PWD:/work:ro" -w /work $img \
-              kicad-cli pcb drc --schematic-parity --severity-error --exit-code-violations \
-              -o /tmp/$n.rpt "templates/kicad/$n/$n.kicad_pcb"
-          done

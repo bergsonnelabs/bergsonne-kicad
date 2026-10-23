@@ -6,8 +6,6 @@ for KiCad 9 and later. Covers every tile in production or beta.
 - `Bergsonne Tiles.kicad_sym`: one symbol per tile.
 - `Bergsonne Tiles.pretty/`: one footprint per tile package (T24-10, T44-10,
   T44-12, T44-14, T48-16, T48-22).
-- `templates/`: KiCad project templates for designing new tiles, one per
-  package, with the fab rules built in. See [templates/README.md](templates/README.md).
 
 ## Install
 
@@ -39,11 +37,3 @@ here; open an issue instead and we'll fix the source.
 
 The footprints are designed to extend the pads by 0.1 mm past the tile edge to
 leave room for a visible/probe-able solder fillet.
-
-## Templates
-
-To design a tile rather than use one, start from `templates/`: KiCad 9 project
-templates for each package (T24-10, T44-10, T44-14, T48-16, T48-22) with the
-outline, base pads, standard pinout, stackup and PCBWay design rules already
-set, plus a script that moves a project up a fab tier when it stops routing.
-[templates/README.md](templates/README.md) has the install step and the rules.
