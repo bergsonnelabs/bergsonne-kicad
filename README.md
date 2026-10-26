@@ -25,6 +25,9 @@ here; open an issue instead and we'll fix the source.
 
 - Named after the tile (`Drive.H`). Revisions after the first carry a suffix
   (`Core.ST.W5-b`).
+- `Generic.T44-10`, `Generic.T44-14`, `Generic.T48-16` and `Generic.T48-22`
+  stand in for any tile of that package: GND, V+, NRST and I2C on the pads
+  every tile of the package uses, the other pads plain I/O named `P2`, `P3`, ...
 - Supply pins sit at the top: V+ first, then the other rails, each followed by
   its own ground, then shared grounds. Every other pin follows in pad order.
 - The text beside a pin gives its supply range or its main alternate functions.
