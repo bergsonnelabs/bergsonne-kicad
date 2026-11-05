@@ -40,3 +40,8 @@ here; open an issue instead and we'll fix the source.
 
 The footprints are designed to extend the pads by 0.1 mm past the tile edge to
 leave room for a visible/probe-able solder fillet.
+
+Since November 2026 tiles have shorter base pads: 0.6 mm (pin 1: 0.8 mm), down
+from 0.8 / 1.0 mm, so the carrier pads are 0.7 mm (pin 1: 0.9 mm). That leaves
+more room to route between the pad rows under the tile. An older tile (0.8 mm
+pads) still lands on them; only the inner 0.2 mm of its pads goes unsoldered.
