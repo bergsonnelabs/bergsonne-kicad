@@ -4154,6 +4154,173 @@
 		)
 		(embedded_fonts no)
 	)
+	(symbol "Sense.I.9-d"
+		(pin_names (offset 0.762))
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "T"
+			(at 0 3.81 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "Sense.I.9-d"
+			(at 0 1.27 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Footprint" "Bergsonne Tiles:T44-10"
+			(at 0 -31.75 0)
+			(effects (font (size 1.27 1.27)) (justify left) (hide yes))
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(property "ki_keywords" "tile bergsonne GND I2C.CLK I2C.DAT I2C.EN I2C.SA0 INT SPI.CLK SPI.CS SPI.MISO SPI.MOSI V+"
+			(at 0 0 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(symbol "Sense.I.9-d_0_1"
+			(rectangle (start 0 0) (end 25.4 -30.48) (stroke (width 0.254) (type default)) (fill (type background)))
+		)
+		(symbol "Sense.I.9-d_1_1"
+			(pin power_in line
+				(at -2.54 -2.54 0)
+				(length 2.54)
+				(name "V+"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "10"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin power_in line
+				(at -2.54 -5.08 0)
+				(length 2.54)
+				(name "GND"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "1"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin bidirectional line
+				(at -2.54 -10.16 0)
+				(length 2.54)
+				(name "I2C.SA0"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "2"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "SPI.MISO" output line)
+			)
+			(pin bidirectional line
+				(at -2.54 -12.7 0)
+				(length 2.54)
+				(name "I2C.EN"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "3"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "SPI.CS" input line)
+			)
+			(pin bidirectional line
+				(at -2.54 -15.24 0)
+				(length 2.54)
+				(name "I2C.CLK"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "4"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "SPI.CLK" input line)
+			)
+			(pin bidirectional line
+				(at -2.54 -17.78 0)
+				(length 2.54)
+				(name "I2C.DAT"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "5"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "SPI.MOSI" input line)
+			)
+			(pin bidirectional line
+				(at -2.54 -20.32 0)
+				(length 2.54)
+				(name "I2C.SA0"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "6"
+					(effects (font (size 1.27 1.27)))
+				)
+				(alternate "SPI.MISO" output line)
+			)
+			(pin no_connect line
+				(at -2.54 -22.86 0)
+				(length 2.54)
+				(hide yes)
+				(name ""
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "7"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin no_connect line
+				(at -2.54 -25.4 0)
+				(length 2.54)
+				(hide yes)
+				(name ""
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "8"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at -2.54 -27.94 0)
+				(length 2.54)
+				(name "INT"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "9"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(text "1.71-3.6V"
+				(at 12.7 -2.54 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "SPI.MISO"
+				(at 12.7 -10.16 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "SPI.CS"
+				(at 12.7 -12.7 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "SPI.CLK"
+				(at 12.7 -15.24 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "SPI.MOSI"
+				(at 12.7 -17.78 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+			(text "SPI.MISO"
+				(at 12.7 -20.32 0)
+				(effects (font (size 1.27 1.27)) (justify left))
+			)
+		)
+		(embedded_fonts no)
+	)
 	(symbol "Sense.M.3G"
 		(pin_names (offset 0.762))
 		(exclude_from_sim no)
